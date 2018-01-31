@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <script src="assets/js/modernizr.js"></script>
+    <title>Pratiche</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/lib.js"></script>
+    <script>
+        function initMap() {
+            var vjfk = new google.maps.LatLng(40.823179, 14.19167);
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: vjfk,
+                backgroundColor: "rgba(255,0,0,0.5)"
+            });
+            var marker = new google.maps.Marker({
+                position: vjfk,
+                map: map,
+                icon: '/assets/images/maps-icon.png'
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLQFTkNUfHVTRTX76cdSpKVgLI0_gawm0&callback=initMap"></script>
+    <script src="assets/js/jquery.menu-aim.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

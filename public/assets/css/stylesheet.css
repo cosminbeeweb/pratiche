@@ -1,0 +1,738 @@
+body {
+    font-family: 'Open Sans','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.menu-item-hero {
+    line-height: 18px !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    margin-right: 55px !important;
+}
+
+.margin-header-hero {
+    margin-top: 5px !important;
+    margin-bottom: 12px !important;
+}
+
+.header-divider {
+    width: 310px;
+}
+
+.item-divider {
+    width: 120px;
+}
+
+.ui.small.image.header-logo {
+    width: 210px !important;
+}
+
+.ui.small.image.header-logo img {
+    display: block;
+    max-width: 219px;
+    height: 46px;
+    margin-top: 3px;
+}
+
+.sidebarmenu-button {
+    margin-left: 9px;
+    width: 27px !important;
+    margin-top: -39px !important;
+}
+
+.telephone-button {
+    width: 24px !important;
+}
+
+.contact-header {
+    margin-left: -25px !important;
+    line-height: 18px !important;
+}
+
+.header-telephone {
+    font-size: 17px;
+}
+
+.text-contact-header {
+    color: #e8521e;
+    font-weight: bold;
+}
+
+.telephone-button img {
+    width: 24px;
+}
+
+.contact-image-header {
+    margin-left: -17px !important;
+}
+
+.subheader-container {
+    height: 500px;
+    max-height: 500px;
+    margin-top: 94px;
+}
+
+.subheader {
+    height: 100%;
+    background: #fff url(../images/bg-image.jpg) no-repeat 50% 20%;
+    background-size: cover;
+    position: relative;
+}
+
+.paragraph-theme-color {
+    color: #e8521e;
+}
+
+.subheader-content {
+    position: absolute;
+    top: 15%;
+    left: 17.5%;
+}
+
+.subheader-content h3 {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 75px;
+}
+
+.subheader-button {
+    margin-top: 50px;
+}
+
+.subheader-button button {
+    background: #e8521e;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subheader-button button:hover {
+    cursor: pointer;
+}
+
+.subheader-button button:focus {
+    outline: none;
+}
+
+.ui.secondary.menu {
+    height: 94px;
+    z-index: 9999;
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.body-content {
+    margin-top: 50px;
+}
+
+.search-services {
+    border: none;
+    border-bottom: 2px solid rgba(158, 158, 158, 0.5);
+    width: 100%;
+    padding: 1px 10px 16px 69px;
+    font-size: 27px;
+    background: url(../images/cerca.png) no-repeat 7px 7px;
+    flex-grow: 2;
+}
+
+.search-services:focus {
+    outline: none;
+}
+
+.search-services-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-services-button {
+    border: none;
+    background: transparent;
+    margin-left: -130px;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 16px;
+    visibility: hidden;
+}
+
+.search-services-button:hover {
+    cursor: pointer;
+}
+
+.search-services-button:focus {
+    outline: none;
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #898989;
+}
+
+input::-moz-placeholder { /* Firefox 19+ */
+    color: #898989;
+}
+
+input:-ms-input-placeholder { /* IE 10+ */
+    color: #898989;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: #898989;
+}
+
+.information-tab {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.information-heading,
+.tab-heading {
+    font-weight: bold;
+    margin-bottom: 60px;
+    color: #000;
+}
+
+#information-tab-list {
+    list-style-type: none;
+}
+
+.information-tab-item {
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+.information-tab-item:hover {
+    cursor: pointer;
+}
+
+.left-box {
+    background: gainsboro;
+    padding-top: 40px;
+    padding-left: 45px;
+    height: 400px;
+}
+
+.right-box {
+    background: #e8521e;
+    padding-top: 40px;
+    padding-left: 45px;
+    height: 400px;
+}
+
+.left-image {
+    float: left;
+    height: 100%;
+    padding-top: 6px;
+    padding-left: 26px;
+}
+
+.tab-description {
+    color: #fff;
+    font-size: 15px;
+    text-align: justify;
+    padding-right: 30px;
+    line-height: 28px;
+}
+
+.details-button {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 45px;
+    font-weight: bold;
+    margin-top: 50px;
+    transition-duration: .15s;
+}
+
+.details-button:focus {
+    outline: none;
+}
+
+.details-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.triangle {
+    position: absolute;
+    right: -25px;
+    z-index: 999;
+}
+
+.tab-heading {
+    text-transform: uppercase;
+}
+
+.services-container {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.services-container p {
+    font-size: 20px;
+}
+
+.services-heading {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.ln-height-sp {
+    margin-top: -14px;
+}
+
+.mgtop60 {
+    margin-top: 60px;
+}
+
+.services-details {
+    text-align: center;
+}
+
+.services-details .top {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-details p {
+    padding: 18px 55px 18px 55px;
+    font-size: 16px;
+}
+
+.services-details .top img {
+    margin-bottom: 25px;
+}
+
+.service-heading {
+    font-weight: bold;
+}
+
+.services-button {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.services-button button {
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: 12px 35px;
+    font-size: 14px;
+    font-weight: bold;
+    transition-duration: 0.15s;
+}
+
+.services-button button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.services-button button:focus {
+    outline: none;
+}
+
+.right-arrow {
+    position: relative;
+    margin-left: 40px;
+}
+
+.right-arrow img {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 25px;
+}
+
+.footer-content {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.row1-1,
+.row1-3 {
+    background: #f5f5f5;
+    height: 300px;
+}
+
+.row1-1 {
+    padding: 40px 50px;
+}
+
+.row1-3,
+.row2-1,
+.row2-3 {
+    padding: 40px 50px;
+}
+
+.row1-1 p,
+.row1-3 p,
+.row2-1 p,
+.row2-3 p {
+    font-size: 20px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.row1-1 h2,
+.row1-3 h2,
+.row2-1 h2,
+.row2-3 h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.row1-2 {
+    background: url('../images/trasparenza.jpg') no-repeat;
+    height: 300px;
+    background-size: cover;
+}
+
+.row2-1,
+.row2-2 {
+    height: 300px;
+}
+
+.row2-2 {
+    background: url('../images/vantaggi.jpg') no-repeat;
+    height: 300px;
+    background-size: cover;
+}
+
+.row2-4 {
+    background: url('../images/velocita.jpg') no-repeat;
+    height: 300px;
+    background-size: cover;
+}
+
+.bottom {
+    height: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100% !important;
+    text-align: center;
+}
+
+#dumpmap {
+    height: 300px;
+    background: rgba(255, 0, 0, 0.20);
+}
+
+.footer-details,
+.footer-icons {
+    padding-top: 12px;
+}
+
+.fa-2 {
+    font-size: 25px !important;
+}
+
+.footer-icons i {
+    padding-left: 20px;
+    transition-duration: .15s
+}
+
+.footer-icons i:hover {
+    color: #e8521e;
+    cursor: pointer;
+}
+
+.footer-icons a {
+    color: #000;
+}
+
+.navbar-nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.fa-3 {
+    font-size: 30px !important;
+    margin-top: 7px;
+}
+
+.item-hero {
+    margin-right: 60px;
+}
+
+.item-hero a {
+    color: #000 !important;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.item0 {
+    min-width: 312px;
+}
+
+.item-hero.item1 {
+    min-width: 125px;
+}
+
+.item-hero.item2 {
+    min-width: 144px;
+}
+
+.item-hero.item3 {
+    min-width: 68px;
+}
+
+.item-hero.item4 {
+    min-width: 89px;
+}
+
+.item-hero.item5 {
+    min-width: 170px;
+}
+
+.hero-offset-2,
+.hero-offset2-2 {
+    margin-left: 16.666667%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 4px -10px 9px 7px #000;
+    background: #fff;
+}
+
+#map {
+    height: 450px;
+}
+
+.hero-offset2-1 {
+    margin-left: 8.333333%;
+}
+
+.sidebar-visible {
+    z-index: 99999;
+}
+
+#cd-nav-trigger-close {
+    font-size: 30px;
+}
+
+.cd-nav-top-close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 999999;
+    display: none;
+    width: 100%;
+    background: #fff;
+}
+
+.span-close-sidebar {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+#cd-nav-trigger-close:hover {
+    cursor: pointer;
+}
+
+.overlay-sidebar {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: none;
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1260px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1536px)
+{
+    .hero-offset-2 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1231px)
+{
+    .item-hero {
+        display: none;
+    }
+
+    .subheader {
+        margin-top: -5px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .collapse {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1575px) {
+    .subheader-content {
+        left: 5%;
+    }
+
+    .subheader-content h3 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .subheader {
+        background: #fff url(../images/bg-image-mobile.jpg) no-repeat;
+    }
+
+    .subheader-content h3 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .search-services {
+        border: none;
+        border-bottom: 2px solid rgba(158, 158, 158, 0.5);
+        padding: 1px 10px 6px 69px;
+        background: url(../images/cerca.png) no-repeat 7px 7px;
+        width: 100%;
+        font-size: 16px;
+        flex-grow: unset;
+    }
+
+    .left-image {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .left-box,
+    .right-box {
+        height: 500px;
+    }
+
+    .information-tab {
+        margin-left: -50px;
+        margin-right: -50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-icons {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .search-services {
+        font-size: 15px;
+    }
+
+    .information-tab {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .left-image {
+        height: 18%;
+        margin-top: -20px;
+    }
+
+    .tab-heading {
+        font-size: 22px;
+    }
+
+    .tab-description {
+        font-size: 14px;
+        line-height: 26px;
+        margin-top: -30px;
+    }
+
+    .footer-content h2 {
+        font-size: 24px;
+    }
+
+    .footer-content p {
+        font-size: 16px;
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .details-button {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .left-box {
+        height: 335px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .row1-1,
+    .row1-3,
+    .row2-1,
+    .row2-3 {
+        padding: 30px 35px;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 500px) {
+    .right-box {
+        height: 675px;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 349px) {
+    .right-box {
+        height: 700px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer-content .col-md-6,
+    .footer-content .col-md-3 {
+        -webkit-box-flex: 0;
+         -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+         flex: 0 0 100%;
+         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .row1-1 p, .row1-3 p, .row2-1 p, .row2-3 p {
+        font-size: 16px;
+    }
+
+    .row1-1 h2, .row1-3 h2, .row2-1 h2, .row2-3 h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1301px) and (max-width: 1500px) {
+    .row1-1 p, .row1-3 p, .row2-1 p, .row2-3 p {
+        font-size: 18px;
+    }
+
+    .row1-1 h2, .row1-3 h2, .row2-1 h2, .row2-3 h2 {
+        font-size: 26px;
+    }
+}
