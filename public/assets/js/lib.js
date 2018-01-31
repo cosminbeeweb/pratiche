@@ -11,14 +11,13 @@ $(document).ready(function(){
         $(".cd-side-nav").toggleClass("sidebar-visible");
         if($(".cd-side-nav").hasClass('sidebar-visible'))
         {
-            $(".cd-side-nav").css('opacity', 1);
+            $(".cd-side-nav").css({"opacity" : "1", "display" : "block"});
             $(".overlay-sidebar").fadeIn("100");
             $(".navbar").css({ "box-shadow" : "none", "top" : "unset", "bottom" : "25%" });
             $("body").css("overflow", "hidden");
             $(".triangle").fadeOut("100");
             $(".cd-nav-top-close").fadeIn("100");
         }
-
         else {
             $(".cd-side-nav").css('opacity', 0);
             $(".overlay-sidebar").fadeOut("100");
@@ -26,8 +25,10 @@ $(document).ready(function(){
             $("body").css("overflow", "visible");
             $(".triangle").fadeIn("100");
             $(".cd-nav-top-close").fadeOut("100");
+            setTimeout(function(){
+                $(".cd-side-nav").css("display","none");
+            }, 300);
         }
-
     });
 
     $("#cd-nav-trigger-close").on("click", function(){
@@ -38,5 +39,8 @@ $(document).ready(function(){
         $("body").css("overflow", "visible");
         $(".triangle").fadeIn("100");
         $(".cd-nav-top-close").fadeOut("100");
+        setTimeout(function(){
+            $(".cd-side-nav").css("display","none");
+        }, 300);
     });
 });
