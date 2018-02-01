@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import { Link } from 'react-router-dom';
-import { generateMetas } from "../../assets/js/config";
-import { breadcrumbData, pagesData, scrollToTop } from '../../assets/js/helper';
+import { breadcrumbData, pagesData, scrollToTop, changeTitle, generateMetas } from '../../assets/js/helper';
 
 class Imprese extends Component {
     constructor(props){
@@ -17,6 +16,7 @@ class Imprese extends Component {
     componentWillMount()
     {
         scrollToTop();
+        changeTitle(this.state.activePage);
         generateMetas(this.state.activePage);
 
         this.setState({

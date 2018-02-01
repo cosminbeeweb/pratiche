@@ -1,10 +1,11 @@
-import $ from 'jquery';
-
-const headData = {
+export const headData = {
     "home": [
         {
+            "title": "Home"
+        },
+        {
             "name" : "keywords",
-            "content" : "key1, key2, key3"
+            "content" : "key1, key2, key3",
         },
         {
             "name" : "description",
@@ -16,6 +17,9 @@ const headData = {
         },
     ],
     "imprese": [
+        {
+            "title": "Imprese"
+        },
         {
             "name" : "keywords",
             "content" : "key1, key2, key3, imprese"
@@ -31,6 +35,9 @@ const headData = {
     ],
     "privati": [
         {
+            "title": "Privati"
+        },
+        {
             "name" : "keywords",
             "content" : "key1, key2, key3, privati"
         },
@@ -45,6 +52,9 @@ const headData = {
     ],
     "professionali": [
         {
+            "title": "Professionali"
+        },
+        {
             "name" : "keywords",
             "content" : "key1, key2, key3, professionali"
         },
@@ -58,20 +68,3 @@ const headData = {
         },
     ],
 };
-
-const clearMetas = () => {
-    if ($('meta[name=keywords]').length !== 0)
-        $('meta[name=keywords]')[0].remove();
-
-    if ($('meta[name=description]').length !== 0)
-        $('meta[name=description]')[0].remove();
-
-    if ($('meta[name=author]').length !== 0)
-        $('meta[name=author]')[0].remove();
-}
-
-export const generateMetas = (page) => {
-    clearMetas();
-    for (let i = 0; i < headData[page].length; i++)
-        $("head").append("<meta name='" + headData[page][i].name + "' content='" + headData[page][i].content + "'>");
-}

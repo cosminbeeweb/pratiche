@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {tabsData, scrollToTop} from "../../assets/js/helper";
-import { generateMetas } from "../../assets/js/config";
+import {tabsData, scrollToTop, changeTitle, generateMetas} from "../../assets/js/helper";
 import Footer from '../footer';
 
 class Home extends Component {
@@ -15,6 +14,7 @@ class Home extends Component {
 
     componentWillMount() {
         scrollToTop();
+        changeTitle(this.state.activePage);
         generateMetas(this.state.activePage);
     }
 

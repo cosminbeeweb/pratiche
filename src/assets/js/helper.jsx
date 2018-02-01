@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { headData } from './config';
 
 export const handleSearch = () => {
     $(document).ready(function(){
@@ -146,4 +147,25 @@ export const pagesData = {
             "Raccomandata A/R a valore legale"
         ]
     }
+};
+
+const clearMetas = () => {
+    if ($('meta[name=keywords]').length !== 0)
+        $('meta[name=keywords]')[0].remove();
+
+    if ($('meta[name=description]').length !== 0)
+        $('meta[name=description]')[0].remove();
+
+    if ($('meta[name=author]').length !== 0)
+        $('meta[name=author]')[0].remove();
+};
+
+export const generateMetas = page => {
+    clearMetas();
+    for (let i = 1; i < headData[page].length; i++)
+        $("head").append("<meta name='" + headData[page][i].name + "' content='" + headData[page][i].content + "'>");
+};
+
+export const changeTitle = page => {
+    $("title")[0].innerHTML = "Pratiche 2M - " + headData[page][0].title;
 };
