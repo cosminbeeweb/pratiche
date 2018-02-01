@@ -1,5 +1,6 @@
 body {
-    font-family: 'Open Sans','Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-family: 'Open Sans';
+    height: Calc(100% - 100px);
 }
 
 .menu-item-hero {
@@ -184,6 +185,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .information-tab {
+    background: gainsboro;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -213,14 +215,17 @@ input:-moz-placeholder { /* Firefox 18- */
     background: gainsboro;
     padding-top: 40px;
     padding-left: 45px;
-    height: 400px;
+    display: table;
+    min-height: 400px;
 }
 
 .right-box {
     background: #e8521e;
     padding-top: 40px;
     padding-left: 45px;
-    height: 400px;
+    padding-bottom: 40px;
+    display: table;
+    min-height: 400px;
 }
 
 .left-image {
@@ -548,6 +553,10 @@ input:-moz-placeholder { /* Firefox 18- */
     padding-left: 20px;
 }
 
+#cd-nav-trigger:hover {
+    cursor: pointer;
+}
+
 #cd-nav-trigger-close:hover {
     cursor: pointer;
 }
@@ -561,6 +570,113 @@ input:-moz-placeholder { /* Firefox 18- */
     bottom: 0;
     z-index: 10;
     display: none;
+}
+
+.page-container {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.hero-container {
+    width: Calc(100vw - 300px);
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-top: 190px;
+}
+
+.breadcrumb-container {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.actual-breadcrumb {
+    font-weight: bold;
+}
+
+.page-header-services {
+    height: 77px;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    background: url(../images/fondo-pagine-interne.jpg) no-repeat;
+}
+
+.tab {
+    width: 360px;
+    float: left;
+    margin-right: 50px;
+    height: 100%;
+}
+
+.tab a {
+    color: #000;
+}
+
+.tab-item {
+    width: 360px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 2px solid #696969;
+    text-align: left;
+}
+
+.tab-item[active=true] {
+    background: #ecf1f5;
+    color: #e8521e;
+}
+
+.tab-item:hover {
+    cursor: pointer;
+}
+
+.tab-item img {
+    width: 60px;
+    height: auto;
+    margin-right: 35px;
+}
+
+.tab-item-content {
+    margin-left: 490px;
+}
+
+.tab-item-content .title {
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.tab-item-content .description {
+    text-align: justify;
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+.tab-item-content li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1192px) {
+    .tab-item-content {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .tab {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .tab,
+    .tab-item {
+        width: 280px;
+    }
 }
 
 
@@ -592,6 +708,28 @@ input:-moz-placeholder { /* Firefox 18- */
 @media screen and (max-width: 992px) {
     .collapse {
         display: block;
+    }
+
+    .hero-container {
+        width: Calc(100vw - 150px);
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .hero-container {
+        width: Calc(100vw - 150px);
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .hero-container {
+        width: Calc(100vw - 70px);
+        margin-left: 35px;
+        margin-right: 35px;
     }
 }
 
@@ -631,11 +769,6 @@ input:-moz-placeholder { /* Firefox 18- */
     .left-image {
         padding-top: 0;
         padding-left: 0;
-    }
-
-    .left-box,
-    .right-box {
-        height: 500px;
     }
 
     .information-tab {
@@ -690,30 +823,12 @@ input:-moz-placeholder { /* Firefox 18- */
     }
 }
 
-@media screen and (max-width: 767px) {
-    .left-box {
-        height: 335px;
-    }
-}
-
 @media screen and (max-width: 500px) {
     .row1-1,
     .row1-3,
     .row2-1,
     .row2-3 {
         padding: 30px 35px;
-    }
-}
-
-@media screen and (min-width: 350px) and (max-width: 500px) {
-    .right-box {
-        height: 675px;
-    }
-}
-
-@media screen and (min-width: 0) and (max-width: 349px) {
-    .right-box {
-        height: 700px;
     }
 }
 

@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import { initMap } from "../assets/js/helper";
 
 class Footer extends Component {
     constructor(props)
     {
         super(props);
         this.state = {};
+    }
+
+    componentDidMount()
+    {
+        initMap();
     }
 
     render()

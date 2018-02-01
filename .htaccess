@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.pratiche2m\.it$ [NC]
+RewriteRule ^(.*)$ https://www.pratiche2m.it/$1 [L,R=301]
+RewriteRule ^ - [L]
+
+# Fallback all other routes to index.html
+RewriteRule ^ /index.html [L]

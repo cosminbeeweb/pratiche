@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     constructor(props)
@@ -76,27 +77,27 @@ class Header extends Component {
                                     </ul>
                                 </li>
 
-                                <li className="has-children overview">
-                                    <a href="#0">IMPRESE</a>
+                                <li className="single overview">
+                                    <Link to="/imprese"> IMPRESE </Link>
                                 </li>
 
-                                <li className="has-children overview">
-                                    <a href="#0">PRIVATI</a>
+                                <li className="single overview">
+                                    <Link to="/privati">PRIVATI</Link>
                                 </li>
 
-                                <li className="has-children overview">
-                                    <a href="#0">PROFESSIONISTI</a>
+                                <li className="single overview">
+                                    <Link to="/professionali">PROFESSIONALI</Link>
                                 </li>
 
-                                <li className="has-children overview">
+                                <li className="single overview">
                                     <a href="#0">CHI SIAMO</a>
                                 </li>
 
-                                <li className="has-children overview">
+                                <li className="single overview">
                                     <a href="#0">DOMANDE FREQUENTI</a>
                                 </li>
 
-                                <li className="has-children overview">
+                                <li className="single overview">
                                     <a href="#0">CONTATTI</a>
                                 </li>
                             </ul>
@@ -109,8 +110,8 @@ class Header extends Component {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item hero-offset-2 col-md-2 item0">
-                                <a style={{ float: "left", marginRight: "30px" }} id="cd-nav-trigger" className="nav-link" href="#0"><i style={{ color: "#000"}} className="fa fa-bars fa-3" aria-hidden="true"></i></a>
-                                <span><a className="nav-link" href="#0"><img src='/assets/images/logo-header.png' alt="logo-header"/></a></span>
+                                <div style={{ float: "left", marginRight: "30px" }} id="cd-nav-trigger" className="nav-link"><i style={{ color: "#000"}} className="fa fa-bars fa-3" aria-hidden="true"></i></div>
+                                <span><Link to="/" className="nav-link"><img src='/assets/images/logo-header.png' alt="logo-header"/></Link></span>
                             </li>
                             <li className="nav-item offset-md-1 item-hero item1">
                                 <a className="nav-link" href="#0">CAMERA <br/> DI COMMERCIO</a>

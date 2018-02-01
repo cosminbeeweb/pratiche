@@ -43,4 +43,21 @@ $(document).ready(function(){
             $(".cd-side-nav").css("display","none");
         }, 300);
     });
+
+    $(".cd-side-nav li.single").on("click", function() {
+        $(".cd-side-nav").toggleClass("sidebar-visible");
+        $(".cd-side-nav").css('opacity', 0);
+        $(".overlay-sidebar").fadeOut("100");
+        $(".navbar").css({ "box-shadow" : "4px -10px 9px 7px #000", "top" : "0", "bottom" : "unset" });
+        $("body").css("overflow", "visible");
+        $(".triangle").fadeIn("100");
+        $(".cd-nav-top-close").fadeOut("100");
+        setTimeout(function(){
+            $(".cd-side-nav").css("display","none");
+        }, 300);
+    });
+
+    $("#map-trigger").on("click", function() {
+        initMap();
+    });
 });
