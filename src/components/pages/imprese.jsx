@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import { Link } from 'react-router-dom';
+import { generateMetas } from "../../assets/js/config";
 import { breadcrumbData, pagesData, scrollToTop } from '../../assets/js/helper';
 
 class Imprese extends Component {
@@ -8,13 +9,15 @@ class Imprese extends Component {
         super(props);
         this.state = {
             breadcrumb: "",
-            activeTab: "imprese"
+            activeTab: "imprese",
+            activePage: "imprese"
         };
     }
 
     componentWillMount()
     {
         scrollToTop();
+        generateMetas(this.state.activePage);
 
         this.setState({
             breadcrumb: breadcrumbData[window.location.pathname].placeholder,

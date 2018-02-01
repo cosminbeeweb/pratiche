@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {tabsData, scrollToTop} from "../../assets/js/helper";
+import { generateMetas } from "../../assets/js/config";
 import Footer from '../footer';
 
 class Home extends Component {
@@ -7,12 +8,14 @@ class Home extends Component {
     {
         super(props);
         this.state = {
-            activeTab: 'emissione'
+            activeTab: "emissione",
+            activePage: "home"
         };
     }
 
     componentWillMount() {
         scrollToTop();
+        generateMetas(this.state.activePage);
     }
 
     handleItemClick = name => {

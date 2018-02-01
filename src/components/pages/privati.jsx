@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import { Link } from 'react-router-dom';
+import { generateMetas } from "../../assets/js/config";
 import { breadcrumbData, pagesData, scrollToTop } from '../../assets/js/helper';
 
 class Privati extends Component {
@@ -8,13 +9,15 @@ class Privati extends Component {
         super(props);
         this.state = {
             breadcrumb: "",
-            activeTab: "privati"
+            activeTab: "privati",
+            activePage: "privati"
         };
     }
 
     componentWillMount()
     {
         scrollToTop();
+        generateMetas(this.state.activePage);
 
         this.setState({
             breadcrumb: breadcrumbData[window.location.pathname].placeholder,
