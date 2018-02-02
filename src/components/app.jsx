@@ -4,7 +4,8 @@ import Header from "./header";
 import Home from "./pages/home";
 import Imprese from "./pages/imprese";
 import Privati from "./pages/privati";
-import Professionali from "./pages/professionali";
+import Professionisti from "./pages/professionisti";
+import ChiSiamo from "./pages/chiSiamo";
 
 class App extends Component {
     constructor(props)
@@ -20,7 +21,8 @@ class App extends Component {
                 <Route exact path={"/"} component={Home}/>
                 <Route exact path={"/imprese"} component={Imprese}/>
                 <Route exact path={"/privati"} component={Privati}/>
-                <Route exact path={"/professionali"} component={Professionali}/>
+                <Route exact path={"/professionisti"} component={Professionisti}/>
+                <Route exact path={"/chi-siamo"} component={ChiSiamo}/>
             </Switch>
         );
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import { Link } from 'react-router-dom';
-import { breadcrumbData, pagesData, scrollToTop, changeTitle, generateMetas } from '../../assets/js/helper';
+import { breadcrumbData, pagesData, scrollToTop, changeTitle } from '../../assets/js/helper';
 
 class Privati extends Component {
     constructor(props){
@@ -17,7 +17,7 @@ class Privati extends Component {
     {
         scrollToTop();
         changeTitle(this.state.activePage);
-        generateMetas(this.state.activePage);
+        // generateMetas(this.state.activePage);
 
         this.setState({
             breadcrumb: breadcrumbData[window.location.pathname].placeholder,
@@ -42,15 +42,20 @@ class Privati extends Component {
 
         return (
             <div>
-                <div className="page-container">
+                <div className="page-container-hero">
                     <div className="page-header-services"></div>
-                    <div className="hero-container">
 
-                        <div className="breadcrumb-container">
+                    <div className="breadcrumb-container">
+                        <div className="main-breadcrumb">
                             <span className="front-breadcrumb"><i className="fa fa-home"></i> Home / </span>
                             <span className="actual-breadcrumb"> { this.state.breadcrumb } </span>
                         </div>
+                        <div className="title-breadcrumb">
+                            <h2>{ this.state.breadcrumb }</h2>
+                        </div>
+                    </div>
 
+                    <div className="hero-inner-container">
                         <div className="tab">
                             <Link to="/imprese">
                                 <div className="tab-item" active={ activeTab === "imprese" ? "true" : "false" } data-name="imprese" onClick={this.handleItemClick}>
@@ -63,9 +68,9 @@ class Privati extends Component {
                                 </div>
                             </Link>
 
-                            <Link to="/professionali">
-                                <div className="tab-item" active={ activeTab === "professionali" ? "true" : "false" } data-name="professionali" onClick={this.handleItemClick}>
-                                    <span><img src="/assets/images/professionisti.png" alt="professionali"/></span>PROFESSIONALI
+                            <Link to="/professionisti">
+                                <div className="tab-item" active={ activeTab === "professionisti" ? "true" : "false" } data-name="professionisti" onClick={this.handleItemClick}>
+                                    <span><img src="/assets/images/professionisti.png" alt="professionisti"/></span>PROFESSIONISTI
                                 </div>
                             </Link>
                         </div>

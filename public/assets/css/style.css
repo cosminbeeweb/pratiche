@@ -39,12 +39,14 @@ a:focus {
 
 .cd-side-nav li {
   list-style-type: none;
+  margin-left: 25px;
 }
 
 .cd-side-nav .fa-angle-right {
   font-size: 20px;
   font-weight: bold;
   float: right;
+  margin-right: 30px;
 }
 
 input {
@@ -519,9 +521,9 @@ Sidebar
     position: absolute;
     float: left;
     top: 0;
-    width: 110px;
+    width: 350px;
     min-height: auto;
-    height: 400px;
+    height: 100vh;
     /* reset style */
     visibility: visible;
     overflow: visible;
@@ -584,17 +586,18 @@ Sidebar
   }
 }
 @media only screen and (min-width: 1025px) {
-  .cd-side-nav {
-    width: 320px;
+  .cd-nav-top-close {
+    width: 350px !important;
   }
+
   .cd-side-nav > ul {
     padding: 0.6em 0;
   }
   .cd-side-nav > ul > li:not(.action-btn):hover > a {
-    background-color: gainsboro;
+    background-color: #ecf1f5;
   }
   .cd-side-nav > ul > li > a {
-    padding: .5em .5em .5em 42px;
+    padding: .5em .5em .5em 15px;
     text-align: left;
     border-bottom: none;
     font-size: 14px;
@@ -620,7 +623,7 @@ Sidebar
     margin: 0 18px;
   }
   .no-touch .cd-side-nav .action-btn a:hover {
-    background-color: gainsboro;
+    background-color: #ecf1f5;
   }
   .cd-side-nav .count {
     /* reset style */
@@ -646,7 +649,7 @@ Sidebar
   position: relative;
   width: 100%;
   display: none;
-  background-color: gainsboro;
+  background-color: #ecf1f5;
 }
 .has-children > a::after {
   /* arrow icon */
@@ -679,12 +682,14 @@ Sidebar
     position: relative;
   }
   .has-children ul {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 100%;
-    width: 160px;
+    left: 350px;
+    width: 320px !important;
     padding: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    padding-top: 62px;
+    transition-duration: 0.25s;
   }
   .has-children ul a {
     text-align: left;
@@ -754,5 +759,9 @@ Sidebar
       height: 100%;
       overflow-y: scroll;
       overflow-x: hidden;
+  }
+
+  .cd-side-nav li {
+    margin-left: 0;
   }
 }

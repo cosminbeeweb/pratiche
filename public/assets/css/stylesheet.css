@@ -3,6 +3,18 @@ body {
     height: Calc(100% - 100px);
 }
 
+a.nav-link {
+    -webkit-transition-duration: .10s;
+    -moz-transition-duration: .10s;
+    -ms-transition-duration: .10s;
+    -o-transition-duration: .10s;
+    transition-duration: .10s;
+}
+
+a.nav-link:hover {
+    color: #e8521e !important;
+}
+
 .menu-item-hero {
     line-height: 18px !important;
     text-transform: uppercase !important;
@@ -50,7 +62,8 @@ body {
 }
 
 .header-telephone {
-    font-size: 17px;
+    font-size: 19px;
+    font-weight: 400;
 }
 
 .text-contact-header {
@@ -69,7 +82,7 @@ body {
 .subheader-container {
     height: 500px;
     max-height: 500px;
-    margin-top: 94px;
+    margin-top: 90px;
 }
 
 .subheader {
@@ -91,7 +104,7 @@ body {
 
 .subheader-content h3 {
     font-size: 70px;
-    font-weight: bold;
+    font-weight: 800;
     line-height: 75px;
     color: #000;
 }
@@ -104,9 +117,15 @@ body {
     background: #e8521e;
     color: #fff;
     border: none;
-    padding: 15px 25px;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 16px 60px;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Open Sans';
+    transition-duration: .25s;
+}
+
+.subheader-button button:hover {
+    background: #000;
 }
 
 .subheader-button button:hover {
@@ -185,7 +204,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .information-tab {
-    background: gainsboro;
+    background: #ecf1f5;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -205,14 +224,96 @@ input:-moz-placeholder { /* Firefox 18- */
     margin-top: 35px;
     font-weight: bold;
     font-size: 20px;
+    color: #000;
+    -webkit-transition-duration: .1s;
+    -moz-transition-duration: .1s;
+    -ms-transition-duration: .1s;
+    -o-transition-duration: .1s;
+    transition-duration: .1s;
+}
+
+.information-tab-item[active=true] {
+    color: #e8521e;
 }
 
 .information-tab-item:hover {
     cursor: pointer;
+    color: #e8521e;
+}
+
+.information-tab-mobile {
+    display: none;
+    margin: 20px;
+}
+
+.information-tab-mobile .title.active h3 {
+    color: #e8521e;
+}
+
+.information-tab-mobile .content {
+    background: #e8521e;
+    color: #fff;
+    font-size: 15px;
+    padding: 30px 15px;
+    text-align: justify;
+    transition-duration: .5s;
+    opacity: 0;
+    display: none;
+}
+
+.information-tab-mobile .content img {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.information-heading-mobile {
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px !important;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.information-tab-mobile .content.active {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
+    -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
+    transition: opacity 0.2s 0s, visibility 0s 0s;
+    visibility: visible;
+}
+
+.information-tab-mobile .title h3 {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.ui.styled.accordion, .ui.styled.accordion .accordion {
+    margin: 0 auto;
+}
+
+.ui.styled.accordion .accordion .content, .ui.styled.accordion .content {
+    padding: 2em 1.25em 2.5em;
+}
+
+.ui.styled.accordion .accordion .title, .ui.styled.accordion .title {
+    color: #000000;
+    padding: 1em;
+}
+
+.ui.styled.accordion, .ui.styled.accordion .accordion {
+    background: #ecf1f5;
+}
+
+.title .dd-icon {
+    float: right;
+    margin-top: -20px;
 }
 
 .left-box {
-    background: gainsboro;
+    background: #ecf1f5;
     padding-top: 40px;
     padding-left: 45px;
     display: table;
@@ -248,10 +349,11 @@ input:-moz-placeholder { /* Firefox 18- */
     background: transparent;
     color: #fff;
     text-transform: uppercase;
-    padding: 12px 45px;
-    font-weight: bold;
-    margin-top: 50px;
-    transition-duration: .15s;
+    padding: 16px 60px;
+    font-weight: 800;
+    margin-top: 25px;
+    font-size: 17px;
+    font-family: 'Open sans';
 }
 
 .details-button:focus {
@@ -287,6 +389,7 @@ input:-moz-placeholder { /* Firefox 18- */
     font-weight: bold;
     margin-bottom: 25px;
     font-size: 25px;
+    color: #000;
 }
 
 .ln-height-sp {
@@ -295,6 +398,11 @@ input:-moz-placeholder { /* Firefox 18- */
 
 .mgtop60 {
     margin-top: 60px;
+}
+
+.hr-hero {
+    margin: 30px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .services-details {
@@ -437,6 +545,10 @@ input:-moz-placeholder { /* Firefox 18- */
     font-size: 30px;
 }
 
+.footer-details {
+    margin-right: -3%;
+}
+
 .footer-details,
 .footer-icons {
     padding-top: 12px;
@@ -447,13 +559,33 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .footer-icons i {
-    padding-left: 20px;
-    transition-duration: .15s
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: .15s;
 }
 
 .footer-icons i:hover {
-    color: #e8521e;
     cursor: pointer;
+}
+
+.footer-icons a i.fa-facebook:hover {
+    color: #4867aa;
+}
+
+.footer-icons a i.fa-twitter:hover {
+    color: #1da1f2;
+}
+
+.footer-icons a i.fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.footer-icons a i.fa-youtube-play:hover {
+    color: #ff0000;
+}
+
+.footer-icons a i.fa-google-plus:hover {
+    color: #dc4a38;
 }
 
 .footer-icons a {
@@ -478,7 +610,7 @@ input:-moz-placeholder { /* Firefox 18- */
 .item-hero a {
     color: #000 !important;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .item0 {
@@ -507,7 +639,7 @@ input:-moz-placeholder { /* Firefox 18- */
 
 .hero-offset-2,
 .hero-offset2-2 {
-    margin-left: 16.666667%;
+    margin-left: 15.666667%;
 }
 
 .navbar {
@@ -562,7 +694,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .overlay-sidebar {
-    background: #fff;
+    background: rgba(0, 0, 0, 0.45);
     position: fixed;
     top: 0;
     left: 0;
@@ -577,30 +709,125 @@ input:-moz-placeholder { /* Firefox 18- */
     margin-bottom: 40px;
 }
 
-.hero-container {
-    width: Calc(100vw - 300px);
-    margin-left: 150px;
-    margin-right: 150px;
-    padding-top: 190px;
+.page-container-hero {
+    margin-top: 93px;
+}
+
+.hero-inner-container {
+    width: Calc(100vw - 648px);
+    margin-left: 338px;
+    margin-right: 310px;
+    padding: 15px 0;
+}
+
+.banner-chi-siamo {
+    width: fit-content;
+    padding: 40px 40px 80px;
+    background: #e8521e;
+    min-width: 465px;
+}
+
+.heading.chi-siamo {
+    padding: 15px 0;
+}
+
+.heading.chi-siamo h2 {
+    color: #000;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.chi-siamo-wrapper {
+    display: flex;
+    padding: 15px 0;
+}
+
+.images.chi-siamo {
+    display: flex;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.images.chi-siamo div {
+    width: 33.333%;
+    padding: 0 15px;
+}
+
+.images.chi-siamo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.images.chi-siamo .heading {
+    color: #000;
+    text-align: left;
+    font-size: 21px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.images.chi-siamo .description {
+    color: #000;
+    text-align: justify;
+    padding: 10px 0 40px;
+}
+
+.chi-siamo-wrapper .description {
+    padding-left: 50px;
+    width: 70%;
+    text-align: justify;
+}
+
+.banner-chi-siamo h2 {
+    font-size: 44px;
+    color: #000;
+    font-weight: 800;
+}
+
+.heading-sp-w {
+    color: #fff;
 }
 
 .breadcrumb-container {
-    margin-bottom: 20px;
     text-transform: uppercase;
     font-size: 14px;
+    background: #ecf1f5;
+    min-height: 63px;
+    height: auto;
+    padding: 30px 17%;
+    margin-top: -6px;
 }
 
-.actual-breadcrumb {
+.front-breadcrumb {
+    font-size: 12px;
+    color: #948d8d;
+    font-weight: 600;
+}
+
+.main-breadcrumb {
     font-weight: bold;
+    width: fit-content;
+    padding: 10px 11px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #000;
+}
+
+.title-breadcrumb {
+    padding: 0 10px;
+}
+
+.title-breadcrumb h2 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #000;
 }
 
 .page-header-services {
     height: 77px;
-    position: absolute;
-    top: 85px;
-    left: 0;
-    right: 0;
     background: url(../images/fondo-pagine-interne.jpg) no-repeat;
+    margin-top: -7px;
 }
 
 .tab {
@@ -692,6 +919,12 @@ input:-moz-placeholder { /* Firefox 18- */
     .hero-offset-2 {
         margin-left: 0;
     }
+
+    .hero-inner-container {
+        width: Calc(100vw - 300px);
+        margin-left: 150px;
+        margin-right: 150px;
+    }
 }
 
 @media screen and (max-width: 1231px)
@@ -710,15 +943,23 @@ input:-moz-placeholder { /* Firefox 18- */
         display: block;
     }
 
-    .hero-container {
+    .hero-inner-container {
         width: Calc(100vw - 150px);
         margin-left: 75px;
         margin-right: 75px;
     }
+
+    .images.chi-siamo {
+        display: block;
+    }
+
+    .images.chi-siamo div {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
-    .hero-container {
+    .hero-inner-container {
         width: Calc(100vw - 150px);
         margin-left: 75px;
         margin-right: 75px;
@@ -726,7 +967,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
-    .hero-container {
+    .hero-inner-container {
         width: Calc(100vw - 70px);
         margin-left: 35px;
         margin-right: 35px;
@@ -766,6 +1007,20 @@ input:-moz-placeholder { /* Firefox 18- */
         flex-grow: unset;
     }
 
+    .chi-siamo-wrapper {
+        display: block;
+    }
+
+    .banner-chi-siamo {
+        margin: 0 auto;
+    }
+
+    .chi-siamo-wrapper .description {
+        padding-left: 0;
+        padding-top: 30px;
+        width: 100%;
+    }
+
     .left-image {
         padding-top: 0;
         padding-left: 0;
@@ -778,6 +1033,24 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 @media screen and (max-width: 768px) {
+    .information-tab.wide,
+    .main-breadcrumb,
+    .banner-chi-siamo {
+        display: none;
+    }
+
+    .chi-siamo-wrapper .description {
+        width: 100%;
+    }
+
+    .breadcrumb-container {
+        padding: 30px 3%;
+    }
+
+    .information-tab-mobile {
+        display: block;
+    }
+
     .footer-icons {
         margin-top: 10px;
         margin-bottom: 20px;
@@ -818,6 +1091,11 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .image.chi-siamo {
+        margin-left: -140px;
+        margin-right: -140px;
+    }
+
     .details-button {
         margin-top: 20px;
     }

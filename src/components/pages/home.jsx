@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {tabsData, scrollToTop, changeTitle, generateMetas} from "../../assets/js/helper";
+import {tabsData, scrollToTop, changeTitle } from "../../assets/js/helper";
 import Footer from '../footer';
 
 class Home extends Component {
@@ -8,19 +8,18 @@ class Home extends Component {
         super(props);
         this.state = {
             activeTab: "emissione",
-            activePage: "home"
+            activePage: "home",
+            activeIndex: 0
         };
     }
 
     componentWillMount() {
         scrollToTop();
         changeTitle(this.state.activePage);
-        generateMetas(this.state.activePage);
+        // generateMetas(this.state.activePage);
     }
 
-    handleItemClick = name => {
-        this.setState({ activeTab: name });
-    }
+    handleItemClick = e => this.setState({ activeTab: e.currentTarget.dataset.name });
 
     checkActive(tab, local)
     {
@@ -34,14 +33,16 @@ class Home extends Component {
 
     renderInformationTab(tab)
     {
+        const activeTab = this.state.activeTab;
+
         return (
             <div className="container">
-                <div className="information-tab row justify-content-start">
+                <div className="information-tab wide row justify-content-start">
                     <div className="left-box col-md-4">
                         <h2 className="information-heading"> IN EVIDENZA </h2>
-                        <h4 className="information-tab-item" name="emissione" onClick={() => this.handleItemClick('emissione')}> EMISSIONE FIRMA DIGITALE { this.checkActive(tab, 'emissione') } </h4>
-                        <h4 className="information-tab-item" name="pratiche" onClick={() => this.handleItemClick('pratiche')}> PRATICHE CAMERALI { this.checkActive(tab, 'pratiche') } </h4>
-                        <h4 className="information-tab-item" name="certificati" onClick={() => this.handleItemClick('certificati')}> CERTIFICATI E VISURE { this.checkActive(tab, 'certificati') } </h4>
+                        <h4 className="information-tab-item" active={ activeTab === "emissione" ? "true" : "false" } data-name="emissione" onClick={this.handleItemClick}> EMISSIONE FIRMA DIGITALE { this.checkActive(tab, 'emissione') } </h4>
+                        <h4 className="information-tab-item" active={ activeTab === "pratiche" ? "true" : "false" } data-name="pratiche" onClick={this.handleItemClick}> PRATICHE CAMERALI { this.checkActive(tab, 'pratiche') } </h4>
+                        <h4 className="information-tab-item" active={ activeTab === "certificati" ? "true" : "false" } data-name="certificati" onClick={this.handleItemClick}> CERTIFICATI E VISURE { this.checkActive(tab, 'certificati') } </h4>
                     </div>
                     <div className="right-box col-md-8">
                         <div className="left-image col-md-2 col-md-offset-1">
@@ -56,6 +57,27 @@ class Home extends Component {
                 </div>
             </div>
         );
+    }
+
+    renderInformationTabsMobile()
+    {
+        const activetabM = this.state.activeTab;
+        const tabs = Object.keys(tabsData).map(tab => {
+            return (
+                <div key={tab}>
+                    <div className={activetabM === tab ? "title active" : "title"} data-name={tab} onClick={this.handleItemClick}>
+                        <h3>{tabsData[tab].heading}</h3>
+                        <i aria-hidden="true" className={activetabM === tab ? "fa fa-minus dd-icon" : "fa fa-plus dd-icon"}></i>
+                    </div>
+                    <div className={activetabM === tab ? "content active" : "content"}>
+                        <p>{tabsData[tab].description}</p>
+                        <button className="details-button" type="button">+ Dettagli </button>
+                    </div>
+                </div>
+            );
+        });
+
+        return tabs;
     }
 
     render()
@@ -86,6 +108,14 @@ class Home extends Component {
                     </div>
 
                     { this.renderInformationTab(this.state.activeTab)}
+
+                    <div className="information-tab-mobile">
+                        <h2 className="information-heading-mobile"> IN EVIDENZA </h2>
+                        <div className="accordion ui styled">
+                            { this.renderInformationTabsMobile() }
+                        </div>
+                    </div>
+
 
                     <div className="container services-container">
                         <h2 className="services-heading"> SERVIZI </h2>

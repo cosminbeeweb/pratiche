@@ -38,13 +38,13 @@ class Header extends Component {
                                     <a href="#0">AGENZIA ENTRATE / INPS / INAIL <i className="fa fa-angle-right" aria-hidden="true"></i></a>
 
                                     <ul>
+                                        <li><a href="#0">Start Up innovative - Iscrizione</a></li>
                                         <li><a href="#0">Banche Dati</a></li>
+                                        <li><a href="#0">Estratto Conto Diritti Camerali</a></li>
                                         <li><a href="#0">Deposito Bilancio</a></li>
                                         <li><a href="#0">Comunica Starweb</a></li>
-                                        <li><a href="#0">Start Up innovative - Iscrizione</a></li>
-                                        <li><a href="#0">Visure Camerali</a></li>
                                         <li><a href="#0">Registrazione Marchio Aziendale</a></li>
-                                        <li><a href="#0">Estratto Conto Diritti Camerali</a></li>
+                                        <li><a href="#0">Visure Camerali</a></li>
                                         <li><a href="#0">PEC - Posta Electronica Certificata</a></li>
                                     </ul>
                                 </li>
@@ -52,28 +52,28 @@ class Header extends Component {
                                     <a href="#0">ALTRI SERVIZI <i className="fa fa-angle-right" aria-hidden="true"></i></a>
 
                                     <ul>
-                                        <li><a href="#0">Banche Dati</a></li>
+                                        <li><a href="#0">Estratto Conto Diritti Camerali</a></li>
                                         <li><a href="#0">Deposito Bilancio</a></li>
-                                        <li><a href="#0">Comunica Starweb</a></li>
                                         <li><a href="#0">Start Up innovative - Iscrizione</a></li>
                                         <li><a href="#0">Visure Camerali</a></li>
                                         <li><a href="#0">Registrazione Marchio Aziendale</a></li>
-                                        <li><a href="#0">Estratto Conto Diritti Camerali</a></li>
+                                        <li><a href="#0">Comunica Starweb</a></li>
                                         <li><a href="#0">PEC - Posta Electronica Certificata</a></li>
+                                        <li><a href="#0">Banche Dati</a></li>
                                     </ul>
                                 </li>
                                 <li className="has-children overview">
                                     <a href="#0">SUPPORTI DIGITALI <i className="fa fa-angle-right" aria-hidden="true"></i></a>
 
                                     <ul>
-                                        <li><a href="#0">Banche Dati</a></li>
-                                        <li><a href="#0">Deposito Bilancio</a></li>
-                                        <li><a href="#0">Comunica Starweb</a></li>
                                         <li><a href="#0">Start Up innovative - Iscrizione</a></li>
+                                        <li><a href="#0">Banche Dati</a></li>
+                                        <li><a href="#0">Comunica Starweb</a></li>
+                                        <li><a href="#0">Deposito Bilancio</a></li>
                                         <li><a href="#0">Visure Camerali</a></li>
                                         <li><a href="#0">Registrazione Marchio Aziendale</a></li>
-                                        <li><a href="#0">Estratto Conto Diritti Camerali</a></li>
                                         <li><a href="#0">PEC - Posta Electronica Certificata</a></li>
+                                        <li><a href="#0">Estratto Conto Diritti Camerali</a></li>
                                     </ul>
                                 </li>
 
@@ -86,11 +86,11 @@ class Header extends Component {
                                 </li>
 
                                 <li className="single overview">
-                                    <Link to="/professionali">PROFESSIONALI</Link>
+                                    <Link to="/professionisti">PROFESSIONISTI</Link>
                                 </li>
 
                                 <li className="single overview">
-                                    <a href="#0">CHI SIAMO</a>
+                                    <Link to="/chi-siamo">CHI SIAMO</Link>
                                 </li>
 
                                 <li className="single overview">

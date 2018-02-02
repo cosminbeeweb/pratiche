@@ -50,21 +50,38 @@ export const headData = {
             "content" : "John Doe privati"
         },
     ],
-    "professionali": [
+    "professionisti": [
         {
-            "title": "Professionali"
+            "title": "Professionisti"
         },
         {
             "name" : "keywords",
-            "content" : "key1, key2, key3, professionali"
+            "content" : "key1, key2, key3, professionisti"
         },
         {
             "name" : "description",
-            "content" : "Some description.. professionali"
+            "content" : "Some description.. professionisti"
         },
         {
             "name" : "author",
-            "content" : "John Doe professionali"
+            "content" : "John Doe professionisti"
+        },
+    ],
+    "chi-siamo": [
+        {
+            "title": "Chi siamo"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, Chi siamo"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. Chi siamo"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe Chi siamo"
         },
     ],
 };
