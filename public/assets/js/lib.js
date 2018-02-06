@@ -61,4 +61,18 @@ $(document).ready(function(){
     $("#map-trigger").on("click", function() {
         initMap();
     });
+
+
+
+    if (window.location.pathname === "/contatti")
+        $(".contact-form textarea").on("keyup", function() {
+            console.log(1);
+
+            $(this).css("height", ($(this)[0].scrollHeight) + "px");
+
+            if($(this).height() > 395)
+                $(this).css("overflow-y", "auto");
+            else
+                $(this).css("overflow-y", "hidden");
+        });
 });

@@ -84,4 +84,38 @@ export const headData = {
             "content" : "John Doe Chi siamo"
         },
     ],
+    "contatti": [
+        {
+            "title": "Contatti"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, Contatti"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. Contatti"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe Contatti"
+        },
+    ],
+    "domande-frequenti": [
+        {
+            "title": "Domande frequenti"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, faq"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. faq"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe faq"
+        },
+    ],
 };

@@ -43,6 +43,37 @@ export const tabsData = {
     }
 };
 
+export const faqData = {
+    "1": {
+        "title": "Do you provide product support?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut."
+    },
+    "2": {
+        "title": "Is your product compactible with Linux servers?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut."
+    },
+    "3": {
+        "title": "Which currencies do you accept?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut."
+    },
+    "4": {
+        "title": "Is health insurance included?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut."
+    },
+    "5": {
+        "title": "Which currencies do you accept?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut."
+    },
+    "6": {
+        "title": "Is your product compactible with Linux servers?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut."
+    },
+    "7": {
+        "title": "Do you provide product support?",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi culpa cum deserunt dolor, eos eveniet expedita hic nulla, officiis placeat quidem quisquam sit soluta tempore, ut velit. Assumenda, ut."
+    }
+};
+
 export const breadcrumbData = {
     "/" : {
         "placeholder" : "Home",
@@ -62,6 +93,14 @@ export const breadcrumbData = {
     "/chi-siamo" : {
         "placeholder" : "Chi siamo",
         "activeitem" : "chi-siamo"
+    },
+    "/contatti" : {
+        "placeholder" : "Contatti",
+        "activeitem" : "contatti"
+    },
+    "/domande-frequenti" : {
+        "placeholder" : "DOMANDE FREQUENTI",
+        "activeitem" : "faq"
     }
 }
 

@@ -94,11 +94,11 @@ class Header extends Component {
                                 </li>
 
                                 <li className="single overview">
-                                    <a href="#0">DOMANDE FREQUENTI</a>
+                                    <Link to="/domande-frequenti">DOMANDE FREQUENTI</Link>
                                 </li>
 
                                 <li className="single overview">
-                                    <a href="#0">CONTATTI</a>
+                                    <Link to="/contatti">CONTATTI</Link>
                                 </li>
                             </ul>
                         </nav>

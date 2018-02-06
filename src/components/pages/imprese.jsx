@@ -47,8 +47,17 @@ class Imprese extends Component {
 
                 <div className="breadcrumb-container">
                     <div className="main-breadcrumb">
-                        <span className="front-breadcrumb"><i className="fa fa-home"></i> Home / </span>
-                        <span className="actual-breadcrumb"> { this.state.breadcrumb } </span>
+                        <ul className="breadcrumb-list" itemScope itemType="http://schema.org/BreadcrumbList">
+                            <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
+                                <i className="fa fa-home"></i>
+                                <span className="front-breadcrumb" itemProp="name"> Home </span>
+                                <meta itemProp="position" content="1" />
+                            </li>
+                            <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
+                                <span className="actual-breadcrumb" itemProp="name"> { this.state.breadcrumb } </span>
+                                <meta itemProp="position" content="2" />
+                            </li>
+                        </ul>
                     </div>
                     <div className="title-breadcrumb">
                         <h2>{ this.state.breadcrumb }</h2>
