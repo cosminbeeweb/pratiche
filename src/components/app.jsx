@@ -8,6 +8,12 @@ import Professionisti from "./pages/professionisti";
 import ChiSiamo from "./pages/chiSiamo";
 import Contatti from "./pages/contatti";
 import Faq from "./pages/faq";
+import AgenziaDelleEntrate from "./pages/agenziaDelleEntrate";
+import agenziaPerLaRiscossione from "./pages/agenziaPerLaRiscossione";
+import Tribunale from "./pages/tribunale";
+import Comune from "./pages/comune";
+import serviziDigitali from "./pages/serviziDigitali";
+import serviziProfessionali from "./pages/serviziProfessionali";
 
 class App extends Component {
     constructor(props)
@@ -27,6 +33,12 @@ class App extends Component {
                 <Route exact path={"/chi-siamo"} component={ChiSiamo}/>
                 <Route exact path={"/contatti"} component={Contatti}/>
                 <Route exact path={"/domande-frequenti"} component={Faq}/>
+                <Route exact path={"/agenzia-delle-entrate"} component={AgenziaDelleEntrate}/>
+                <Route exact path={"/agenzia-per-la-riscossione"} component={agenziaPerLaRiscossione}/>
+                <Route exact path={"/tribunale"} component={Tribunale}/>
+                <Route exact path={"/comune"} component={Comune}/>
+                <Route exact path={"/servizi-digitali"} component={serviziDigitali}/>
+                <Route exact path={"/servizi-professionali"} component={serviziProfessionali}/>
             </Switch>
         );
     }

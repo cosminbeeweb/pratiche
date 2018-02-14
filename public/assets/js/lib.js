@@ -62,12 +62,12 @@ $(document).ready(function(){
         initMap();
     });
 
+    $("#recaptcha-trigger").on("click", function() {
+        initRecaptcha();
+    });
 
-
-    if (window.location.pathname === "/contatti")
+    if ($(".textarea-clearfix").length !== 0)
         $(".contact-form textarea").on("keyup", function() {
-            console.log(1);
-
             $(this).css("height", ($(this)[0].scrollHeight) + "px");
 
             if($(this).height() > 395)

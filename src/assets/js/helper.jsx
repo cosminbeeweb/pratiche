@@ -19,7 +19,13 @@ export const initMap = () => {
     setTimeout(function() {
         $("#map-trigger").click();
     }, 300);
-}
+};
+
+export const initRecaptcha = () => {
+    setTimeout(function() {
+        $("#recaptcha-trigger").click();
+    }, 300);
+};
 
 export const scrollToTop = () => {
     $("html, body").stop().animate({scrollTop:0}, 500, 'swing');
@@ -74,6 +80,76 @@ export const faqData = {
     }
 };
 
+export const servicesList = {
+    "agenzia-delle-entrate" : {
+        icon: "entrate.png",
+        list: [
+            "Contratti di locazione",
+            "Contratti di comodato",
+            "Registrazione atti e verbali",
+            "Apertura partita iva",
+            "Certificati reddituali",
+            "Dichiarazione di successione",
+            "Codice fiscale attribuzione e/o duplicato",
+            "Certificato reddituale",
+            "Regolarità fiscale"
+        ]
+    },
+    "agenzia-per-la-riscossione" : {
+        icon: "riscossione.png",
+        list: [
+            "Estratto di ruolo",
+            "Relate di notifica",
+            "Pagamento cartelle",
+            "Rateizzi",
+            "Rimborsi",
+            "Richiesta RAV"
+        ]
+    },
+    "comune" : {
+        icon: "comune.png",
+        list: [
+            "SUAP",
+            "Certificati di residenza",
+            "Stato di famiglia",
+            "Certificato di matrimonio",
+            "Certificato di cittadinanza",
+            "Certificato di congruità",
+            "Certificato godimento dei diritti politici",
+            "Iscrizione liste elettorali"
+        ]
+    },
+    "servizi-digitali" : {
+        icon: "digitali.png",
+        list: [
+            "PEC",
+            "Firma digitale / CNS",
+            "Smart card",
+            "Aruba Key",
+            "Codice LEI",
+            "Fatturazione elettronica",
+            "Conservazione sostitutiva"
+        ]
+    },
+    "servizi-professionali" : {
+        icon: "professionali.png",
+        list: [
+            "Ricorsi",
+            "Legge 3/2012 sovraindebitamento",
+            "Marchi e brevetti",
+            "DVR - sicurezza sul lavoro"
+        ]
+    },
+    "tribunale" : {
+        icon: "tribunale.png",
+        list: [
+            "Casellario giudiziale",
+            "Carichi pendenti",
+            "Anagrafica delle sanzioni amministrative"
+        ]
+    }
+};
+
 export const breadcrumbData = {
     "/" : {
         "placeholder" : "Home",
@@ -101,6 +177,30 @@ export const breadcrumbData = {
     "/domande-frequenti" : {
         "placeholder" : "DOMANDE FREQUENTI",
         "activeitem" : "faq"
+    },
+    "/agenzia-delle-entrate" : {
+        "placeholder" : "AGENZIA DELLE ENTRATE",
+        "activeitem" : "agenzia-delle-entrate"
+    },
+    "/agenzia-per-la-riscossione" : {
+        "placeholder" : "AGENZIA PER LA RISCOSSIONE",
+        "activeitem" : "agenzia-per-la-riscossione"
+    },
+    "/tribunale" : {
+        "placeholder" : "TRIBUNALE",
+        "activeitem" : "tribunale"
+    },
+    "/comune" : {
+        "placeholder" : "COMUNE",
+        "activeitem" : "tribunale"
+    },
+    "/servizi-digitali" : {
+        "placeholder" : "SERVIZI DIGITALI",
+        "activeitem" : "servizi-digitali"
+    },
+    "/servizi-professionali" : {
+        "placeholder" : "SERVIZI PROFESSIONALI",
+        "activeitem" : "servizi-professionali"
     }
 }
 

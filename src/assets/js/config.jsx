@@ -118,4 +118,106 @@ export const headData = {
             "content" : "John Doe faq"
         },
     ],
+    "agenzia-delle-entrate": [
+        {
+            "title": "Agenzia delle Entrate"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, agenzia delle entrate"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. agenzia delle entrate"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe agenzia delle entrate"
+        },
+    ],
+    "agenzia-per-la-riscossione": [
+        {
+            "title": "Agenzia per la Riscossione"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, agenzia per la riscossione"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. agenzia per la riscossione"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe agenzia per la riscossione"
+        },
+    ],
+    "tribunale": [
+        {
+            "title": "Tribunale"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, Tribunale"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. Tribunale"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe Tribunale"
+        },
+    ],
+    "comune": [
+        {
+            "title": "Comune"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, Comune"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. Comune"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe Comune"
+        },
+    ],
+    "servizi-digitali": [
+        {
+            "title": "Servizi digitali"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, Servizi digitali"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. Servizi digitali"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe Servizi digitali"
+        },
+    ],
+    "servizi-professionali": [
+        {
+            "title": "Servizi professionali"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, Servizi professionali"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. Servizi professionali"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe Servizi professionali"
+        },
+    ],
 };

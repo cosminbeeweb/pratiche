@@ -22,11 +22,13 @@
     </noscript>
     <div id="root"></div>
     <div id="map-trigger"></div>
+    <div id="recaptcha-trigger"></div>
 
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/lib.js"></script>
     <script>
-        function initMap() {
+        function initMap()
+        {
             var vjfk = new google.maps.LatLng(40.823179, 14.19167);
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 17,
@@ -39,6 +41,14 @@
                 icon: '/assets/images/maps-icon.png'
             });
         }
+
+        function initRecaptcha()
+        {
+            grecaptcha.render($(".g-recaptcha")[0], {
+                'sitekey' : '6LdnlEQUAAAAAIkXZOfhbc2n0aGb6P7PfYrvpxX_'
+            });
+        }
+
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLQFTkNUfHVTRTX76cdSpKVgLI0_gawm0"></script>
     <script src="assets/js/jquery.menu-aim.js"></script>

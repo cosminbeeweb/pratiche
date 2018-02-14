@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import Map from '../map';
-import { breadcrumbData, scrollToTop, changeTitle } from '../../assets/js/helper';
+import {breadcrumbData, scrollToTop, changeTitle, initRecaptcha} from '../../assets/js/helper';
 
 class Contatti extends Component {
     constructor(props)
@@ -20,6 +20,11 @@ class Contatti extends Component {
         // generateMetas(this.state.activePage);
 
         this.setState({ breadcrumb: breadcrumbData[window.location.pathname].placeholder });
+    }
+
+    componentDidMount()
+    {
+        initRecaptcha();
     }
 
     render()
@@ -49,12 +54,13 @@ class Contatti extends Component {
                     <Map/>
 
                     <div className="hero-inner-container contact">
-                        <div className="contact-container hero-row">
+                        <div className="page-container hero-row">
                             <div className="contact-form hero-column hero-col-6">
                                 <h3>INVIA UN MESSAGGIO</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad blanditiis consequuntur cupiditate dignissimos, dolorem earum eius eligendi consequunt </p>
 
-                                <form>
+                                <form className="form-template">
+                                    <div className="form-corner"></div>
                                     <label htmlFor="name">NOME</label>
                                     <input required type="text" name="name" id="name" autoCorrect="off"/>
                                     <label htmlFor="surname">COGNOME</label>
@@ -127,6 +133,7 @@ class Contatti extends Component {
                         </div>
                     </div>
                 </div>
+                <div className="textarea-clearfix hidden"></div>
                 <span className="contact"></span>
                 <Footer type="contact"/>
             </div>
