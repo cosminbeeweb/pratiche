@@ -90,13 +90,13 @@ class Header extends Component {
                                 <Link className="nav-link" to="/camera-di-commercio">CAMERA <br/> DI COMMERCIO</Link>
                             </li>
                             <li className="nav-item item-hero item2">
-                                <a className="nav-link" href="#0">AGENZIA ENTRATE <br/> INPS / INAIL</a>
+                                <Link className="nav-link" to="/agenzia-delle-entrate">AGENZIA ENTRATE <br/> INPS / INAIL</Link>
                             </li>
                             <li className="nav-item item-hero item3">
-                                <a className="nav-link" href="#0">ALTRI <br/> SERVIZI</a>
+                                <Link className="nav-link" to="/servizi-professionali">SERVIZI <br/> PROFESSIONALI</Link>
                             </li>
                             <li className="nav-item item-hero item4">
-                                <a className="nav-link" href="#0">SUPPORTI <br/> DIGITALI</a>
+                                <Link className="nav-link" to="/servizi-digitali">SUPPORTI <br/> DIGITALI</Link>
                             </li>
                             <li className="nav-item item-hero item5">
                                     <span style={{float: 'left', marginTop: '16px', marginRight: '10px'}}>
