@@ -14,6 +14,7 @@ import Tribunale from "./pages/tribunale";
 import Comune from "./pages/comune";
 import serviziDigitali from "./pages/serviziDigitali";
 import serviziProfessionali from "./pages/serviziProfessionali";
+import CameraDiCommercio from "./pages/cameraDiCommercio";
 
 class App extends Component {
     constructor(props)
@@ -39,6 +40,7 @@ class App extends Component {
                 <Route exact path={"/comune"} component={Comune}/>
                 <Route exact path={"/servizi-digitali"} component={serviziDigitali}/>
                 <Route exact path={"/servizi-professionali"} component={serviziProfessionali}/>
+                <Route exact path={"/camera-di-commercio"} component={CameraDiCommercio}/>
             </Switch>
         );
     }

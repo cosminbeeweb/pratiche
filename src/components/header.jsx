@@ -87,7 +87,7 @@ class Header extends Component {
                                 <span><Link to="/" className="nav-link"><img src='/assets/images/logo-header.png' alt="logo-header"/></Link></span>
                             </li>
                             <li className="nav-item offset-md-1 item-hero item1">
-                                <a className="nav-link" href="#0">CAMERA <br/> DI COMMERCIO</a>
+                                <Link className="nav-link" to="/camera-di-commercio">CAMERA <br/> DI COMMERCIO</Link>
                             </li>
                             <li className="nav-item item-hero item2">
                                 <a className="nav-link" href="#0">AGENZIA ENTRATE <br/> INPS / INAIL</a>

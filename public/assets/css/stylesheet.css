@@ -176,12 +176,74 @@ a.nav-link:hover {
 .search-services-button {
     border: none;
     background: transparent;
-    margin-left: -130px;
+    margin-left: -104px;
     font-size: 20px;
     color: #000;
     font-weight: bold;
     margin-bottom: 16px;
     visibility: hidden;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-results {
+    background: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 3px 17px -3px #000;
+    position: absolute;
+    z-index: 1000;
+    height: auto;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s ease-in-out;
+    -moz-transition: opacity 0.35s ease-in-out;
+    -o-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.search-results img {
+    max-width: 35px;
+}
+
+.search-results.open {
+   opacity: 1;
+}
+
+.search-results .result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    -webkit-transition-duration: .25s;
+    -moz-transition-duration: .25s;
+    -ms-transition-duration: .25s;
+    -o-transition-duration: .25s;
+    transition-duration: .25s;
+}
+
+.search-results a {
+    color: #000;
+}
+
+.search-results .result:hover {
+    background: #d3d8dc;
+    cursor: pointer;
+}
+
+.search-results .result div {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-results .result div h4 {
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .search-services-button:hover {

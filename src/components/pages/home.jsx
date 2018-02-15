@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {tabsData, scrollToTop, changeTitle } from "../../assets/js/helper";
+import {tabsData, scrollToTop, changeTitle, attemptSearch } from "../../assets/js/helper";
 import Footer from '../footer';
 
 class Home extends Component {
@@ -13,10 +13,21 @@ class Home extends Component {
         };
     }
 
-    componentWillMount() {
+    componentWillMount()
+    {
         scrollToTop();
         changeTitle(this.state.activePage);
         // generateMetas(this.state.activePage);
+    }
+
+    componentDidMount()
+    {
+        document.getElementById('search-box').addEventListener('keyup', event => {
+            if ((document.getElementById('search-box').value).length >= 3)
+                attemptSearch(document.getElementById('search-box').value);
+            else
+                document.getElementsByClassName('search-results')[0].classList.remove("open");
+        });
     }
 
     handleItemClick = e => this.setState({ activeTab: e.currentTarget.dataset.name });
@@ -102,8 +113,8 @@ class Home extends Component {
                         <div className="search-container">
                             <form className="search-services-form">
                                 <input id="search-box" className="search-services" placeholder="Inserisci il nome del documento o del servizo che stai cercando..."/>
-                                <button type="button" className="search-services-button">RICERCA</button>
                             </form>
+                            <div className="search-results"></div>
                         </div>
                     </div>
 

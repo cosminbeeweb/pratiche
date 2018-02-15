@@ -220,4 +220,21 @@ export const headData = {
             "content" : "John Doe Servizi professionali"
         },
     ],
+    "camera-di-commercio": [
+        {
+            "title": "Camera di Commercio"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, Camera di Commercio"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. Camera di Commercio"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe SCamera di Commercio"
+        },
+    ],
 };

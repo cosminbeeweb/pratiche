@@ -1,11 +1,12 @@
 import $ from 'jquery';
 import { headData } from './config';
+import { searchKeywords, serviceParents } from './searchKeywords';
+import React from 'react';
 
 export const handleSearch = () => {
     $(document).ready(function(){
         if (window.location.href === window.location.origin + "/")
             $("#search-box").on("change keydown keypress keyup", function(){
-                console.log(1);
 
                 if ($(this).val() !== "")
                     $(".search-services-button").show('fast');
@@ -147,6 +148,21 @@ export const servicesList = {
             "Carichi pendenti",
             "Anagrafica delle sanzioni amministrative"
         ]
+    },
+    "camera-di-commercio" : {
+        icon: "camera.png",
+        list: [
+            "Cessione quote societarie",
+            "Deposito bilanci",
+            "Conversione bilanci in XBRL",
+            "Comunicazione cambio amministratore",
+            "Comunicazione cambio sede (nello stesso comune)",
+            "Visura camerale ordinaria",
+            "Visura camerale storica",
+            "Visura protesti",
+            "Certificati di iscrizione",
+            "Estratto conto diritti camerali"
+        ]
     }
 };
 
@@ -201,6 +217,10 @@ export const breadcrumbData = {
     "/servizi-professionali" : {
         "placeholder" : "SERVIZI PROFESSIONALI",
         "activeitem" : "servizi-professionali"
+    },
+    "/camera-di-commercio" : {
+        "placeholder" : "CAMERA DI COMMERCIO",
+        "activeitem" : "camera-di-commercio"
     }
 }
 
@@ -312,3 +332,78 @@ export const generateMetas = page => {
 export const changeTitle = page => {
     $("title")[0].innerHTML = "Pratiche 2M - " + headData[page][0].title;
 };
+
+export const attemptSearch = searchedValue => {
+    $(".search-results").empty();
+    let actualSearch = searchedValue;
+    let searchWords = searchedValue.split(" ").filter(x => x.length > 1);
+
+    searchWords = searchWords.map(word => word = word.toLowerCase());
+
+    let matches = [];
+
+    for (let i = 0; i < searchKeywords.length; i++) // for each service
+    {
+        let matchObj = {};
+        matchObj.hit = 0;
+
+        for (let j = 0; j < searchKeywords[i].keywords.length; j++) // for each keyword of each service
+        {
+            matchObj.parent = searchKeywords[i].parent;
+            matchObj.service = searchKeywords[i].service;
+
+            for (let k = 0; k < searchWords.length; k++)
+                if (searchKeywords[i].keywords[j].indexOf(searchWords[k]) > -1)
+                    matchObj.hit += 1;
+        }
+
+        if (matchObj.hit !== 0)
+            matches.push(matchObj);
+    }
+
+    $(document).mouseup(function(e)
+    {
+        var container = $(".search-container");
+
+        if (!container.is(e.target) && container.has(e.target).length === 0)
+            $('.search-results').removeClass('open');
+    });
+
+    if (matches.length > 0)
+        renderSearchResults(matches, actualSearch);
+    else
+        $(".search-results").append('<div>0 risultati trovati per "' + actualSearch + '"</div>');
+
+    $(".search-results").addClass('open');
+}
+
+const renderSearchResults = (results, searchedValue) => {
+    let maxHit = results[0].hit;
+
+    for (let i = 1; i < results.length; i++)
+        if (results[i].hit > maxHit)
+            maxHit = results[i].hit;
+
+    results = results.filter(result => result.hit == maxHit);
+
+    for (let i = 0; i < results.length; i++)
+        $(".search-results").prepend(renderSearchResult(results[i]));
+
+    $(".search-results").append('<div>' + results.length + ' risultati trovati per "' + searchedValue + '"</div>');
+}
+
+const renderSearchResult = result => {
+    const resultRendered = '' +
+            '<a href="/' + result.parent + '">' +
+                '<div class="result">' +
+                    '<div class="result-image">' +
+                        '<img src="/assets/images/' + serviceParents[result.parent].icon + '" alt="' + result.service + '"/>' +
+                    '</div>' +
+                    '<div class="result-service">' +
+                        '<h4>' + result.service + '</h4>' +
+                    '</div>' +
+                '</div>' +
+            '</a>';
+
+    return resultRendered;
+}
