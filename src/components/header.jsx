@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {attemptSearch} from "../assets/js/helper";
 
 class Header extends Component {
     constructor(props)
     {
         super(props);
         this.state = {};
+    }
+
+    componentDidMount()
+    {
+        document.getElementById('search-boxv2').addEventListener('keyup', event => {
+            if ((document.getElementById('search-boxv2').value).length >= 3)
+                attemptSearch(document.getElementById('search-boxv2').value);
+            else
+                document.getElementsByClassName('search-resultsv2')[0].classList.remove("open");
+        });
     }
 
     render()
@@ -36,19 +47,6 @@ class Header extends Component {
                                 <li className="single overview">
                                     <Link to="/comune"> COMUNE </Link>
                                 </li>
-
-                                {/*<li className="single overview">*/}
-                                    {/*<Link to="/imprese"> IMPRESE </Link>*/}
-                                {/*</li>*/}
-
-                                {/*<li className="single overview">*/}
-                                    {/*<Link to="/privati">PRIVATI</Link>*/}
-                                {/*</li>*/}
-
-                                {/*<li className="single overview">*/}
-                                    {/*<Link to="/professionisti">PROFESSIONISTI</Link>*/}
-                                {/*</li>*/}
-
 
                                 <li className="single overview">
                                     <Link to="/agenzia-per-la-riscossione">AGENZIA PER LA RISCOSSIONE / EX EQUITALIA</Link>
@@ -107,9 +105,25 @@ class Header extends Component {
                                     <span className="header-telephone">081 198 12836</span>
                                 </a>
                             </li>
+
+                            <li className="nav-item item-hero item6">
+                                <div className="searchbox-header">
+                                    <img src="/assets/images/cerca.png" alt="cerca"/>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </nav>
+
+                <div className="searchbox-v2">
+
+                    <i className="close-search fa fa-close" aria-hidden="true"></i>
+
+                    <form className="search-services-form">
+                        <input id="search-boxv2" className="search-services" placeholder="Inserisci il nome del documento o del servizo che stai cercando..."/>
+                    </form>
+                    <div className="search-results search-resultsv2"></div>
+                </div>
             </div>
         );
     }

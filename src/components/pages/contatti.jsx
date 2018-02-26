@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import Map from '../map';
-import {breadcrumbData, scrollToTop, changeTitle, initRecaptcha} from '../../assets/js/helper';
+import {breadcrumbData, scrollToTop, changeTitle, initRecaptcha, attemptSearch} from '../../assets/js/helper';
 
 class Contatti extends Component {
     constructor(props)
@@ -24,6 +24,13 @@ class Contatti extends Component {
 
     componentDidMount()
     {
+        document.getElementById('search-box').addEventListener('keyup', event => {
+            if ((document.getElementById('search-box').value).length >= 3)
+                attemptSearch(document.getElementById('search-box').value);
+            else
+                document.getElementsByClassName('search-results')[1].classList.remove("open");
+        });
+
         initRecaptcha();
     }
 
@@ -54,6 +61,14 @@ class Contatti extends Component {
                     <Map/>
 
                     <div className="hero-inner-container contact">
+                        <div className="container">
+                            <div className="search-container">
+                                <form className="search-services-form">
+                                    <input id="search-box" className="search-services" placeholder="Inserisci il nome del documento o del servizo che stai cercando..."/>
+                                </form>
+                                <div className="search-results"></div>
+                            </div>
+                        </div>
                         <div className="page-container hero-row">
                             <div className="contact-form hero-column hero-col-6">
                                 <h3>INVIA UN MESSAGGIO</h3>

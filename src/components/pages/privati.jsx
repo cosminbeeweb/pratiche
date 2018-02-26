@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import { Link } from 'react-router-dom';
-import { breadcrumbData, pagesData, scrollToTop, changeTitle } from '../../assets/js/helper';
+import {breadcrumbData, pagesData, scrollToTop, changeTitle, attemptSearch} from '../../assets/js/helper';
 
 class Privati extends Component {
     constructor(props){
@@ -22,6 +22,16 @@ class Privati extends Component {
         this.setState({
             breadcrumb: breadcrumbData[window.location.pathname].placeholder,
             activeTab: breadcrumbData[window.location.pathname].activeitem
+        });
+    }
+
+    componentDidMount()
+    {
+        document.getElementById('search-box').addEventListener('keyup', event => {
+            if ((document.getElementById('search-box').value).length >= 3)
+                attemptSearch(document.getElementById('search-box').value);
+            else
+                document.getElementsByClassName('search-results')[1].classList.remove("open");
         });
     }
 
@@ -65,6 +75,14 @@ class Privati extends Component {
                     </div>
 
                     <div className="hero-inner-container">
+                        <div className="container">
+                            <div className="search-container">
+                                <form className="search-services-form">
+                                    <input id="search-box" className="search-services" placeholder="Inserisci il nome del documento o del servizo che stai cercando..."/>
+                                </form>
+                                <div className="search-results"></div>
+                            </div>
+                        </div>
                         <div className="tab">
                             <Link to="/imprese">
                                 <div className="tab-item" active={ activeTab === "imprese" ? "true" : "false" } data-name="imprese" onClick={this.handleItemClick}>

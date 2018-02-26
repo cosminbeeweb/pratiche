@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Footer from '../footer';
 import Map from '../map';
 import FooterContent from '../footerContent';
-import { breadcrumbData, faqData, scrollToTop, changeTitle } from '../../assets/js/helper';
+import {breadcrumbData, faqData, scrollToTop, changeTitle, attemptSearch} from '../../assets/js/helper';
 
 class Faq extends Component {
     constructor(props)
@@ -22,6 +22,16 @@ class Faq extends Component {
         // generateMetas(this.state.activePage);
 
         this.setState({ breadcrumb: breadcrumbData[window.location.pathname].placeholder });
+    }
+
+    componentDidMount()
+    {
+        document.getElementById('search-box').addEventListener('keyup', event => {
+            if ((document.getElementById('search-box').value).length >= 3)
+                attemptSearch(document.getElementById('search-box').value);
+            else
+                document.getElementsByClassName('search-results')[1].classList.remove("open");
+        });
     }
 
     handleItemClick = e => this.setState({ activeTab: e.currentTarget.dataset.name });
@@ -70,6 +80,14 @@ class Faq extends Component {
                     </div>
 
                     <div className="hero-inner-container">
+                        <div className="container">
+                            <div className="search-container">
+                                <form className="search-services-form">
+                                    <input id="search-box" className="search-services" placeholder="Inserisci il nome del documento o del servizo che stai cercando..."/>
+                                </form>
+                                <div className="search-results"></div>
+                            </div>
+                        </div>
                         <div className="faq-tab-container">
                             <div className="accordion ui styled">
                                 { this.renderInformationTabs() }

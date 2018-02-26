@@ -26,7 +26,7 @@ class Home extends Component {
             if ((document.getElementById('search-box').value).length >= 3)
                 attemptSearch(document.getElementById('search-box').value);
             else
-                document.getElementsByClassName('search-results')[0].classList.remove("open");
+                document.getElementsByClassName('search-results')[1].classList.remove("open");
         });
     }
 

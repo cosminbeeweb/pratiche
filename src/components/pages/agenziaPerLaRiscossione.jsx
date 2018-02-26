@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
-import {breadcrumbData, servicesList, scrollToTop, changeTitle, initRecaptcha} from '../../assets/js/helper';
+import {
+    breadcrumbData, servicesList, scrollToTop, changeTitle, initRecaptcha,
+    attemptSearch
+} from '../../assets/js/helper';
 
 class agenziaPerLaRiscossione extends Component {
     constructor(props)
@@ -23,6 +26,13 @@ class agenziaPerLaRiscossione extends Component {
 
     componentDidMount()
     {
+        document.getElementById('search-box').addEventListener('keyup', event => {
+            if ((document.getElementById('search-box').value).length >= 3)
+                attemptSearch(document.getElementById('search-box').value);
+            else
+                document.getElementsByClassName('search-results')[1].classList.remove("open");
+        });
+
         initRecaptcha();
     }
 
@@ -65,6 +75,14 @@ class agenziaPerLaRiscossione extends Component {
                     </div>
 
                     <div className="hero-inner-container servizi">
+                        <div className="container">
+                            <div className="search-container">
+                                <form className="search-services-form">
+                                    <input id="search-box" className="search-services" placeholder="Inserisci il nome del documento o del servizo che stai cercando..."/>
+                                </form>
+                                <div className="search-results"></div>
+                            </div>
+                        </div>
                         <div className="page-container">
                             <div className="hero-row">
                                 <div className="hero-column hero-col-12">

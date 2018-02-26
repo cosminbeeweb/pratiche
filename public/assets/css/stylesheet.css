@@ -1229,6 +1229,55 @@ input:-moz-placeholder { /* Firefox 18- */
     display: none;
 }
 
+.searchbox-header img:hover {
+    cursor: pointer;
+}
+
+.item-hero.item6 {
+    display: none;
+    width: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.searchbox-v2 {
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.close-search {
+    float: right;
+    font-size: 30px;
+    margin: 10px 25px;
+}
+
+.close-search:hover {
+    cursor: pointer;
+}
+
+.search-container {
+    padding-top: 10px;
+}
+
+.searchbox-v2 .search-services-form {
+    margin-top: 115px;
+    padding: 0 50px;
+}
+
+.searchbox-v2 .search-services {
+    background: url(../images/cerca.png) no-repeat 7px 1px;
+}
+
 .hero-row {
     display: flex;
     flex-direction: row;
@@ -1353,9 +1402,21 @@ input:-moz-placeholder { /* Firefox 18- */
     .item-hero {
         display: none;
     }
+    
+    .item-hero.item6 {
+        display: flex;
+    }
 
     .subheader {
         margin-top: -5px;
+    }
+
+    #search-box {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
     }
 }
 
@@ -1449,6 +1510,10 @@ input:-moz-placeholder { /* Firefox 18- */
         width: 100%;
         font-size: 16px;
         flex-grow: unset;
+    }
+
+    #search-boxv2 {
+        padding: 7px 10px 6px 69px;
     }
 
     .chi-siamo-wrapper {
@@ -1585,8 +1650,4 @@ input:-moz-placeholder { /* Firefox 18- */
     .row1-1 h2, .row1-3 h2, .row2-1 h2, .row2-3 h2 {
         font-size: 26px;
     }
-}
-
-@media screen and (max-width: 1024px) {
-
 }

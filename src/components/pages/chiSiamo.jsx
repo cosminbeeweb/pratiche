@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
-import { breadcrumbData, scrollToTop, changeTitle } from '../../assets/js/helper';
+import {breadcrumbData, scrollToTop, changeTitle, attemptSearch} from '../../assets/js/helper';
 
 class Imprese extends Component {
     constructor(props){
@@ -18,6 +18,16 @@ class Imprese extends Component {
         // generateMetas(this.state.activePage);
 
         this.setState({ breadcrumb: breadcrumbData[window.location.pathname].placeholder });
+    }
+
+    componentDidMount()
+    {
+        document.getElementById('search-box').addEventListener('keyup', event => {
+            if ((document.getElementById('search-box').value).length >= 3)
+                attemptSearch(document.getElementById('search-box').value);
+            else
+                document.getElementsByClassName('search-results')[1].classList.remove("open");
+        });
     }
 
     render()
@@ -45,6 +55,15 @@ class Imprese extends Component {
                     </div>
 
                     <div className="hero-inner-container">
+                        <div className="container">
+                            <div className="search-container">
+                                <form className="search-services-form">
+                                    <input id="search-box" className="search-services" placeholder="Inserisci il nome del documento o del servizo che stai cercando..."/>
+                                </form>
+                                <div className="search-results"></div>
+                            </div>
+                        </div>
+
                         <div className="chi-siamo-wrapper">
                             <div className="banner-chi-siamo">
                                 <h2>da oggi svolgerai</h2>

@@ -1,12 +1,4 @@
 $(document).ready(function(){
-    if (window.location.href === window.location.origin + "/")
-        $("#search-box").on("change keydown keypress keyup", function(){
-            if ($(this).val() !== "")
-                $(".search-services-button").css('visibility', 'visible');
-            else
-                $(".search-services-button").css('visibility', 'hidden')
-        });
-
     $("#cd-nav-trigger").on("click", function(){
         $(".cd-side-nav").toggleClass("sidebar-visible");
         if($(".cd-side-nav").hasClass('sidebar-visible'))
@@ -75,4 +67,17 @@ $(document).ready(function(){
             else
                 $(this).css("overflow-y", "hidden");
         });
+
+    $(".searchbox-header img").on("click", function() {
+        $(".searchbox-v2").fadeIn(300);
+        $("html").css('overflow-y', 'hidden');
+        $("body").css('overflow-y', 'hidden');
+    });
+
+    $(".close-search").on("click", function() {
+        $(".searchbox-v2").fadeOut(300);
+        $("html").css('overflow-y', 'visible');
+        $("body").css('overflow-y', 'visible');
+    });
+
 });
