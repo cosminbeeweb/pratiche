@@ -36,17 +36,20 @@ export const tabsData = {
     "emissione": {
         "icon": "firma-digitale.png",
         "heading": "EMISSIONE FIRMA DIGITALE",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        "description": "Pratiche 2M si occuperà di sbrigare tutte le pratiche per il rilascio della firma digitale; in poco tempo, sarai in grado di firmare certificati e documenti telematici come se fossero cartacei.",
+        "link": "/servizi-digitali"
     },
     "pratiche": {
         "icon": "pratiche-camerali.png",
         "heading": "PRATICHE CAMERALI",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis commodi corporis dolore eligendi eum fugit ipsum laudantium nemo neque nostrum nulla numquam praesentium provident quaerat quidem, tempore veniam vero!"
+        "description": "Con il nostro supporto, potrai eseguire qualsiasi pratica camerale di cui hai bisogno con il minimo sforzo e, soprattutto, in pochissimo tempo.",
+        "link": "/camera-di-commercio"
     },
     "certificati": {
         "icon": "certificati-visure.png",
         "heading": "CERTIFICATI E VISURE",
-        "description": "Tutti i contratii di locazione e affitto di beni immobili (compresi i fondi rustici) devono essere obbligatoriamente registrati presoo l'Agenzia delle Entrate, dall'affittuario (Condutorre) o dal proprietario (Locatore), qualunque sia l'ammontare del canone pattuito, entro 30 giorni dalla data di stipula o dalla."
+        "description": "Pratiche 2M è al tuo fianco anche per richiedere certificati e visure di tutti i tipi, dandoti tutte le informazioni ed i documenti di cui hai bisogno e risolvendo qualsiasi problematica.",
+        "link": "/camera-di-commercio"
     }
 };
 

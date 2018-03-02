@@ -4,6 +4,7 @@ import {
     breadcrumbData, servicesList, scrollToTop, changeTitle, initRecaptcha,
     attemptSearch
 } from '../../assets/js/helper';
+import { Link } from 'react-router-dom';
 
 class Comune extends Component {
     constructor(props)
@@ -60,7 +61,7 @@ class Comune extends Component {
                             <ul className="breadcrumb-list" itemScope itemType="http://schema.org/BreadcrumbList">
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
                                     <i className="fa fa-home"></i>
-                                    <span className="front-breadcrumb" itemProp="name"> Home </span>
+                                    <Link to="/"><span className="front-breadcrumb" itemProp="name"> Home </span></Link>
                                     <meta itemProp="position" content="1" />
                                 </li>
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
@@ -86,7 +87,7 @@ class Comune extends Component {
                         <div className="page-container">
                             <div className="hero-row">
                                 <div className="hero-column hero-col-12">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, in, nostrum. Ab assumenda aut consequuntur doloribus, ea, ex explicabo ipsam libero, necessitatibus possimus quas qui quidem repudiandae sed unde voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti esse fugiat neque quam repellendus, sunt ut voluptatum. Eos maxime nisi vel veritatis. Assumenda doloribus explicabo nostrum repellendus sint temporibus ut. </p>
+                                    <p>Pratiche 2M offre ai propri clienti supporto anche nella richiesta dei certificati negli uffici comunali, come stati di famiglia, certificati di residenza, matrimoni e altro. Grazie ai nostri collaboratori, affidabili e precisi, eviterai uffici affollati, file ed inutili perdite di tempo.</p>
                                 </div>
                             </div>
                             <div className="hero-row">
@@ -133,7 +134,7 @@ class Comune extends Component {
                 </div>
                 <div className="textarea-clearfix hidden"></div>
                 <span className="contact"></span>
-                <Footer type="initial"/>
+                <Footer type="secondary"/>
             </div>
         );
     }

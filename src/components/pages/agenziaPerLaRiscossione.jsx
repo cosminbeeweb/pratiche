@@ -4,6 +4,7 @@ import {
     breadcrumbData, servicesList, scrollToTop, changeTitle, initRecaptcha,
     attemptSearch
 } from '../../assets/js/helper';
+import { Link } from 'react-router-dom';
 
 class agenziaPerLaRiscossione extends Component {
     constructor(props)
@@ -60,7 +61,7 @@ class agenziaPerLaRiscossione extends Component {
                             <ul className="breadcrumb-list" itemScope itemType="http://schema.org/BreadcrumbList">
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
                                     <i className="fa fa-home"></i>
-                                    <span className="front-breadcrumb" itemProp="name"> Home </span>
+                                    <Link to="/"><span className="front-breadcrumb" itemProp="name"> Home </span></Link>
                                     <meta itemProp="position" content="1" />
                                 </li>
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
@@ -86,7 +87,7 @@ class agenziaPerLaRiscossione extends Component {
                         <div className="page-container">
                             <div className="hero-row">
                                 <div className="hero-column hero-col-12">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, in, nostrum. Ab assumenda aut consequuntur doloribus, ea, ex explicabo ipsam libero, necessitatibus possimus quas qui quidem repudiandae sed unde voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti esse fugiat neque quam repellendus, sunt ut voluptatum. Eos maxime nisi vel veritatis. Assumenda doloribus explicabo nostrum repellendus sint temporibus ut. </p>
+                                    <p>La nostra agenzia di disbrigo pratiche ha acquisto praticità ed esperienza anche nella richiesta di documenti all'Agenzia per la Riscossione, come il pagamento di cartelle, gli estratti di ruolo o le richieste RAV. Contattaci per avere maggiori informazioni su tutti i servizi che possiamo offrirti.</p>
                                 </div>
                             </div>
                             <div className="hero-row">
@@ -133,7 +134,7 @@ class agenziaPerLaRiscossione extends Component {
                 </div>
                 <div className="textarea-clearfix hidden"></div>
                 <span className="contact"></span>
-                <Footer type="initial"/>
+                <Footer type="secondary"/>
             </div>
         );
     }

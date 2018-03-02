@@ -58,16 +58,6 @@ $(document).ready(function(){
         initRecaptcha();
     });
 
-    if ($(".textarea-clearfix").length !== 0)
-        $(".contact-form textarea").on("keyup", function() {
-            $(this).css("height", ($(this)[0].scrollHeight) + "px");
-
-            if($(this).height() > 395)
-                $(this).css("overflow-y", "auto");
-            else
-                $(this).css("overflow-y", "hidden");
-        });
-
     $(".searchbox-header img").on("click", function() {
         $(".searchbox-v2").fadeIn(300);
         $("html").css('overflow-y', 'hidden');

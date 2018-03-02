@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import {breadcrumbData, scrollToTop, changeTitle, attemptSearch} from '../../assets/js/helper';
+import { Link } from 'react-router-dom';
 
 class Imprese extends Component {
     constructor(props){
@@ -40,7 +41,7 @@ class Imprese extends Component {
                             <ul className="breadcrumb-list" itemScope itemType="http://schema.org/BreadcrumbList">
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
                                     <i className="fa fa-home"></i>
-                                    <span className="front-breadcrumb" itemProp="name"> Home </span>
+                                    <Link to="/"><span className="front-breadcrumb" itemProp="name"> Home </span></Link>
                                     <meta itemProp="position" content="1" />
                                 </li>
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
@@ -86,17 +87,17 @@ class Imprese extends Component {
                             <div>
                                 <img src="/assets/images/trasparenza.jpg" alt="Trasparenza"/>
                                 <h3 className="heading">TRASPARENZA</h3>
-                                <p className="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet consequatur consequuntur dolore exercitationem facilis</p>
+                                <p className="description">Il nostro team di professionisti è sempre pronto a rispondere alle tue domande.</p>
                             </div>
                             <div>
                                 <img src="/assets/images/vantaggi.jpg" alt="Vantaggi"/>
                                 <h3 className="heading">VANTAGGI</h3>
-                                <p className="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet consequatur consequuntur dolore exercitationem facilis</p>
+                                <p className="description">Eviterai di perdere tempo prezioso; i nostri consulenti ti assisteranno anche telefonicamente.</p>
                             </div>
                             <div>
                                 <img src="/assets/images/velocita.jpg" alt="Velocità"/>
                                 <h3 className="heading">VELOCITÀ</h3>
-                                <p className="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet consequatur consequuntur dolore exercitationem facilis</p>
+                                <p className="description">Il nostro servizio è in grado di soddisfare le vostre richieste anche in poche ore.</p>
                             </div>
                         </div>
                     </div>

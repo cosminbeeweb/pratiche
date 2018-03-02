@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {tabsData, scrollToTop, changeTitle, attemptSearch } from "../../assets/js/helper";
 import Footer from '../footer';
+import { Link } from 'react-router-dom';
+import serviziDigitali from './serviziDigitali';
 
 class Home extends Component {
     constructor(props)
@@ -62,7 +64,7 @@ class Home extends Component {
                         <div className="col-md-12">
                             <h2 className="tab-heading"> { tabsData[tab].heading } </h2>
                             <p className="tab-description">{ tabsData[tab].description }</p>
-                            <button className="details-button" type="button">+ Dettagli </button>
+                            <Link to={ tabsData[tab].link }><button className="details-button" type="button">+ Dettagli </button></Link>
                         </div>
                     </div>
                 </div>
@@ -143,29 +145,26 @@ class Home extends Component {
                                     <img src="/assets/images/imprese.png" alt="Imprese"/><br/>
                                     <h4 className="service-heading">IMPRESE</h4>
                                 </div>
-                                <p>Lorem ipsum e un testo segnaposto utilizzato net settore della tipografia</p>
+                                <p>Pratiche 2M sarà il primo alleato della tua impresa.</p>
                             </div>
                             <div className="col-md-4">
                                 <div className="top">
                                     <img src="/assets/images/privati.png" alt="Privati"/><br/>
                                     <h4 className="service-heading" alt="Privati">PRIVATI</h4>
                                 </div>
-                                <p>Lorem ipsum e un testo segnaposto utilizzato net settore della tipografia</p>
+                                <p>Ci occupiamo dell'espletamento di pratiche anche per utenti privati.</p>
                             </div>
                             <div className="col-md-4">
                                 <div className="top">
                                     <img src="/assets/images/professionisti.png" alt="Professionisti"/><br/>
                                     <h4 className="service-heading">PROFESSIONISTI</h4>
                                 </div>
-                                <p>Lorem ipsum e un testo segnaposto utilizzato net settore della tipografia</p>
+                                <p>Affidaci la tua pratica e risolveremo qualsiasi richiesta in poco tempo.</p>
                             </div>
                         </div>
 
                         <div className="mgtop60"></div>
 
-                        <div className="services-button">
-                            <button type="button">VEDI I SERVIZI<span className="right-arrow"><img src="/assets/images/right-arrow.png" alt="right arrow"/></span></button>
-                        </div>
                     </div>
                 </div>
                 <Footer/>

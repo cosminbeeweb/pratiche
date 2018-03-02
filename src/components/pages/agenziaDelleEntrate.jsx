@@ -4,6 +4,7 @@ import {
     breadcrumbData, servicesList, scrollToTop, changeTitle, initRecaptcha,
     attemptSearch
 } from '../../assets/js/helper';
+import { Link } from 'react-router-dom';
 
 class agenziaDelleEntrate extends Component {
     constructor(props)
@@ -61,7 +62,7 @@ class agenziaDelleEntrate extends Component {
                             <ul className="breadcrumb-list" itemScope itemType="http://schema.org/BreadcrumbList">
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
                                     <i className="fa fa-home"></i>
-                                    <span className="front-breadcrumb" itemProp="name"> Home </span>
+                                    <Link to="/"><span className="front-breadcrumb" itemProp="name"> Home </span></Link>
                                     <meta itemProp="position" content="1" />
                                 </li>
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
@@ -87,7 +88,7 @@ class agenziaDelleEntrate extends Component {
                         <div className="page-container">
                             <div className="hero-row">
                                 <div className="hero-column hero-col-12">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, in, nostrum. Ab assumenda aut consequuntur doloribus, ea, ex explicabo ipsam libero, necessitatibus possimus quas qui quidem repudiandae sed unde voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti esse fugiat neque quam repellendus, sunt ut voluptatum. Eos maxime nisi vel veritatis. Assumenda doloribus explicabo nostrum repellendus sint temporibus ut. </p>
+                                    <p>Pratiche 2M può aiutarti con tutte le attività relative all' Agenzia delle Entrate, dai certificati alle dichiarazioni, dall'apertura della Partita IVA ai contratti. Con noi, ogni pratica sarà espletata nel minor tempo possibile, grazie ad un team di collaboratori fortemente qualificati e sempre disponibili.</p>
                                 </div>
                             </div>
                             <div className="hero-row">
@@ -134,7 +135,7 @@ class agenziaDelleEntrate extends Component {
                 </div>
                 <div className="textarea-clearfix hidden"></div>
                 <span className="contact"></span>
-                <Footer type="initial"/>
+                <Footer type="secondary"/>
             </div>
         );
     }

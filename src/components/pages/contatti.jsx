@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Footer from '../footer';
 import Map from '../map';
 import {breadcrumbData, scrollToTop, changeTitle, initRecaptcha, attemptSearch} from '../../assets/js/helper';
+import { Link } from 'react-router-dom';
 
 class Contatti extends Component {
     constructor(props)
@@ -44,7 +45,7 @@ class Contatti extends Component {
                             <ul className="breadcrumb-list" itemScope itemType="http://schema.org/BreadcrumbList">
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
                                     <i className="fa fa-home"></i>
-                                    <span className="front-breadcrumb" itemProp="name"> Home </span>
+                                    <Link to="/"><span className="front-breadcrumb" itemProp="name"> Home </span></Link>
                                     <meta itemProp="position" content="1" />
                                 </li>
                                 <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">

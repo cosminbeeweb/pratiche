@@ -37,7 +37,7 @@ class Footer extends Component {
                             <img src="/assets/images/logo-header.png" alt="logo footer"/>
                         </div>
                         <div className="col-md-4 footer-details">
-                            <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 000000000000</p>
+                            <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 06757301210</p>
                         </div>
                         <div className="col-md-3 offset-md-1 footer-icons">
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook fa-2" aria-hidden="true"></i></a>
@@ -58,7 +58,7 @@ class Footer extends Component {
                             <img src="/assets/images/logo-header.png" alt="logo footer"/>
                         </div>
                         <div className="col-md-4 footer-details">
-                            <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 000000000000</p>
+                            <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 06757301210</p>
                         </div>
                         <div className="col-md-3 offset-md-1 footer-icons">
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook fa-2" aria-hidden="true"></i></a>
@@ -77,7 +77,7 @@ class Footer extends Component {
                         <img src="/assets/images/logo-header.png" alt="logo footer"/>
                     </div>
                     <div className="col-md-4 footer-details">
-                        <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 000000000000</p>
+                        <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 06757301210</p>
                     </div>
                     <div className="col-md-3 offset-md-1 footer-icons">
                         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook fa-2" aria-hidden="true"></i></a>
@@ -97,7 +97,7 @@ class Footer extends Component {
                             <img src="/assets/images/logo-header.png" alt="logo footer"/>
                         </div>
                         <div className="col-md-4 footer-details">
-                            <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 000000000000</p>
+                            <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 06757301210</p>
                         </div>
                         <div className="col-md-3 offset-md-1 footer-icons">
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook fa-2" aria-hidden="true"></i></a>

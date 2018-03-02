@@ -562,9 +562,8 @@ input:-moz-placeholder { /* Firefox 18- */
 .row1-3 p,
 .row2-1 p,
 .row2-3 p {
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 40px;
-    font-weight: bold;
 }
 
 .row1-1 h2,
@@ -887,7 +886,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .title-breadcrumb {
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .title-breadcrumb h2 {
@@ -1037,9 +1036,9 @@ input:-moz-placeholder { /* Firefox 18- */
 
 .page-container textarea {
     height: 40px;
-    min-height: 40px;
-    max-height: 400px;
-    overflow-y: hidden;
+    min-height: 350px;
+    max-height: 500px;
+    overflow-y: auto;
     padding-top: 0px;
 }
 
