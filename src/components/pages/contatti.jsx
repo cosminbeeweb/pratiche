@@ -73,8 +73,7 @@ class Contatti extends Component {
                         <div className="page-container hero-row">
                             <div className="contact-form hero-column hero-col-6">
                                 <h3>INVIA UN MESSAGGIO</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad blanditiis consequuntur cupiditate dignissimos, dolorem earum eius eligendi consequunt </p>
-
+                                
                                 <form className="form-template">
                                     <div className="form-corner"></div>
                                     <label htmlFor="name">NOME</label>
@@ -94,8 +93,7 @@ class Contatti extends Component {
                             </div>
                             <div className="contact-information hero-column hero-col-6">
                                 <h3>RECAPITI</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad blanditiis consequuntur cupiditate dignissimos, dolorem earum eius eligendi consequunt </p>
-
+                                
                                 <div className="hero-row">
                                     <div className="hero-column horizontal-align hero-col-2">
                                         <i className="fa fa-map-marker" aria-hidden="true"></i>

@@ -73,7 +73,14 @@ class Imprese extends Component {
                             </div>
 
                             <div className="description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et laboriosam necessitatibus nihil odio repellat voluptatibus! Alias assumenda deleniti magni nam non, quae quidem quo sequi? Ad commodi consectetur nam pariatur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloremque ducimus et ipsum molestiae molestias perspiciatis repudiandae similique sint? Ab accusamus accusantium corporis fuga hic inventore iste nam similique vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci inventore magni placeat veniam? A animi, consectetur excepturi ipsum iure laudantium, minus molestiae nulla officiis porro, quidem reiciendis sapiente tenetur voluptatum!
+                            	La società 2M srl nasce dall’idea di Mario e Massimo Santoro, due professionisti che nel 2010 decidono di
+								costituire un’ Agenzia di disbrigo pratiche amministrative che eroga i propri servizi a favore di
+								professionisti, aziende e privati su tutto il territorio nazionale. Grazie ad una efficiente struttura
+								organizzativa e ad un team altamente qualificato, l’Agenzia 2M, riesce ad espletare tutte le pratiche
+								burocratiche in tempi rapidi e costi ridotti facendo risparmiare ai propri clienti tempo e denaro.
+								Con un approccio completamente orientato al raggiungimento dei risultati, alla soddisfazione del cliente e
+								con un continuo dialogo con la pubblica amministrazione, la società 2M riesce ad espletare ogni tipo di
+								adempimenti burocratici anche i più complessi    
                             </div>
                         </div>
 
