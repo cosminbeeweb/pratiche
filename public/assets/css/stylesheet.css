@@ -663,6 +663,10 @@ input:-moz-placeholder { /* Firefox 18- */
     color: #000;
 }
 
+.footer-icons {
+    margin-bottom: 10px;
+}
+
 .navbar-nav {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1277,6 +1281,52 @@ input:-moz-placeholder { /* Firefox 18- */
     background: url(../images/cerca.png) no-repeat 7px 1px;
 }
 
+.error {
+    font-size: 13px;
+    color: red;
+    margin: -18px 0 10px 1px;
+    display: none;
+}
+
+.error.recaptcha {
+    margin-top: 0;
+}
+
+.footer-details p {
+    font-size: 14px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.convenzio {
+    margin-top: -3px;
+}
+
+.convenzio p {
+    font-size: 14px;
+    margin: 0 20px;
+    display: inline-block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 20px;
+}
+
+.convenzio div {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.convenzio div:first-child img {
+    max-width: 140px;
+}
+
+.convenzio div:nth-child(2) img {
+    max-width: 170px;
+}
+
 .hero-row {
     display: flex;
     flex-direction: row;
@@ -1607,6 +1657,10 @@ input:-moz-placeholder { /* Firefox 18- */
     .details-button {
         margin-top: 20px;
     }
+
+    .logo-footer {
+        max-width: 160px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1648,5 +1702,22 @@ input:-moz-placeholder { /* Firefox 18- */
 
     .row1-1 h2, .row1-3 h2, .row2-1 h2, .row2-3 h2 {
         font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .actual-footer {
+        display: block;
+    }
+
+    .actual-footer > div {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .actual-footer .footer-icons {
+        margin-bottom: 10px;
     }
 }

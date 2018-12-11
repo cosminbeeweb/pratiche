@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../footer';
 import Map from '../map';
-import {breadcrumbData, scrollToTop, changeTitle, initRecaptcha, attemptSearch} from '../../assets/js/helper';
+import {sendEmail, validateForm, breadcrumbData, scrollToTop, scrollToFormTop, changeTitle, initRecaptcha, attemptSearch} from '../../assets/js/helper';
 import { Link } from 'react-router-dom';
 
 class Contatti extends Component {
@@ -33,6 +33,51 @@ class Contatti extends Component {
         });
 
         initRecaptcha();
+    }
+
+    prepareEmail = () => {
+        let errorDivs = document.getElementsByClassName("error");
+
+        for (let i = 0; i < errorDivs.length; i++)
+        {
+            errorDivs.innerHTML = "";
+            errorDivs[i].style.display = "none";
+        }
+
+        let data = {};
+
+        data.name = document.getElementById("name").value;
+        data.surname = document.getElementById("surname").value;
+        data.phone = document.getElementById("phone").value;
+        data.email = document.getElementById("email").value;
+        data.message = document.getElementById("message").value;
+        data.recaptcha = document.getElementById("recaptchaValidation").value;
+
+        validateForm(data, response => {
+            if (response.errors === 0)
+            {
+                let formInputs = new FormData();
+
+                formInputs.append("name", data.name);
+                formInputs.append("surname", data.surname);
+                formInputs.append("phone", data.phone);
+                formInputs.append("email", data.email);
+                formInputs.append("message", data.message);
+
+                sendEmail(formInputs, response => {
+                    console.log(response.data);
+                });
+            }
+            else
+            {
+                for (let error in response.errors)
+                {
+                    document.querySelector(".error." + error).innerHTML = response.errors[error];
+                    document.querySelector(".error." + error).style.display = "block";
+                }
+                scrollToFormTop();
+            }
+        });
     }
 
     render()
@@ -73,22 +118,33 @@ class Contatti extends Component {
                         <div className="page-container hero-row">
                             <div className="contact-form hero-column hero-col-6">
                                 <h3>INVIA UN MESSAGGIO</h3>
-                                
+
                                 <form className="form-template">
                                     <div className="form-corner"></div>
+
                                     <label htmlFor="name">NOME</label>
                                     <input required type="text" name="name" id="name" autoCorrect="off"/>
+                                    <div className="error name"></div>
+
                                     <label htmlFor="surname">COGNOME</label>
                                     <input required type="text" name="surname" id="surname" autoCorrect="off"/>
+                                    <div className="error surname"></div>
+
                                     <label htmlFor="phone">TELEFONO</label>
                                     <input required type="text" name="phone" id="phone" autoCorrect="off"/>
+                                    <div className="error telefono"></div>
+
                                     <label htmlFor="email">EMAIL</label>
                                     <input required type="email" name="email" id="email" autoCorrect="off"/>
+                                    <div className="error email"></div>
+
                                     <label htmlFor="message">MESSAGGIO</label>
                                     <textarea required name="message" id="message" cols="30" rows="10" autoCorrect="off"></textarea>
                                     
                                     <div className="g-recaptcha" data-sitekey="6LdnlEQUAAAAAIkXZOfhbc2n0aGb6P7PfYrvpxX_"></div>
-                                    <button className="contact-submit" type="button">INVIA MESSAGGIO</button>
+                                    <div className="error recaptcha"></div>
+
+                                    <button onClick={ this.prepareEmail } className="contact-submit" type="button">INVIA MESSAGGIO</button>
                                 </form>
                             </div>
                             <div className="contact-information hero-column hero-col-6">

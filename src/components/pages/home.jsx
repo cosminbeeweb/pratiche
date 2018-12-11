@@ -100,12 +100,14 @@ class Home extends Component {
                 <div className="subheader-container">
                     <div className="subheader">
                         <div className="subheader-content">
-                            <h3>da oggi svolgerai</h3>
-                            <h3>le tue pratiche</h3>
-                            <h3>in soli <span className="paragraph-theme-color"> 2 minuti!</span></h3>
+                            <h3>Scopri il servizio</h3>
+                            <h3>di <span className="paragraph-theme-color">Fatturazione</span></h3>
+                            <h3><span className="paragraph-theme-color">Elettronica!</span></h3>
 
                             <div className="subheader-button">
-                                <button>SCOPRI I SERVIZI</button>
+                                <Link to="/fatturazione-elettronica">
+                                    <button >+ DETTAGLI</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

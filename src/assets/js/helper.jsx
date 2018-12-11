@@ -2,6 +2,8 @@ import $ from 'jquery';
 import { headData } from './config';
 import { searchKeywords, serviceParents } from './searchKeywords';
 import React from 'react';
+import axios from 'axios';
+const serverName = "http://pratiche-build.wd/";
 
 export const handleSearch = () => {
     $(document).ready(function(){
@@ -31,6 +33,18 @@ export const initRecaptcha = () => {
 export const scrollToTop = () => {
     $("html, body").stop().animate({scrollTop:0}, 500, 'swing');
 };
+
+export const scrollToFormTop = () => {
+
+    let vw = $('body').width() + 17;
+
+    let offset = document.getElementsByClassName('form-template')[0].offsetHeight;
+
+    if (vw < 993)
+        $("html, body").stop().animate({scrollTop: offset }, 500, 'swing');
+    else
+        $("html, body").stop().animate({scrollTop: offset - 250}, 500, 'swing');
+}
 
 export const tabsData = {
     "emissione": {
@@ -224,7 +238,7 @@ export const breadcrumbData = {
     "/camera-di-commercio" : {
         "placeholder" : "CAMERA DI COMMERCIO",
         "activeitem" : "camera-di-commercio"
-    }
+    },
 }
 
 export const pagesData = {
@@ -409,4 +423,56 @@ const renderSearchResult = result => {
             '</a>';
 
     return resultRendered;
+}
+
+export const sendEmail = (data, callback) => {
+    axios.post("https://www.pratiche2m.it/mail", data)
+        .then(response => callback(response))
+        .catch(error => console.log(error));
+}
+
+const isNumber = val => /^\d+$/.test(val)
+
+export const validateForm = (data, callback) => {
+    let errors = {};
+
+    if (data.name === "")
+        errors.name = "Name field is required";
+
+    if (data.surname === "")
+        errors.surname = "Surname field is required";
+
+    if (data.phone !== "")
+    {
+        if (!isNumber(data.phone))
+            errors.telefono = "Phone format is invalid";
+    }
+    else
+        errors.telefono = "Phone field is required";
+
+    if (data.email !== "")
+    {
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email)))
+            errors.email = "Email format is invalid";
+    }
+    else
+        errors.email = "Email field is required";
+
+    if (data.recaptcha === "")
+        errors.recaptcha = "We have to know that you are not a robot";
+
+    let response = {};
+
+    let count = 0;
+
+    for (let i in errors)
+        if (errors.hasOwnProperty(i))
+            count++;
+
+    if (count === 0)
+        response.errors = 0;
+    else
+        response.errors = errors;
+
+    callback(response);
 }

@@ -6,5 +6,5 @@ RewriteCond %{HTTP_HOST} !^www\.pratiche2m\.it$ [NC]
 RewriteRule ^(.*)$ https://www.pratiche2m.it/$1 [L,R=301]
 RewriteRule ^ - [L]
 
-# Fallback all other routes to index.html
+# Fallback all other routes to index.php
 RewriteRule ^ /index.html [L]

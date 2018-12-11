@@ -53,6 +53,10 @@ class Header extends Component {
                                 </li>
 
                                 <li className="single overview">
+                                    <Link style={{ color: '#e8521e' }} to="/fatturazione-elettronica">FATTURAZIONE ELETTRONICA</Link>
+                                </li>
+
+                                <li className="single overview">
                                     <Link to="/servizi-digitali">SERVIZI DIGITALI</Link>
                                 </li>
 
@@ -66,6 +70,10 @@ class Header extends Component {
 
                                 <li className="single overview">
                                     <Link to="/contatti">CONTATTI</Link>
+                                </li>
+
+                                <li className="single overview">
+                                    <a href="/assets/brochure/index.html" target="_blank">BROCHURE</a>
                                 </li>
                             </ul>
                         </nav>

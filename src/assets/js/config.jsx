@@ -237,4 +237,21 @@ export const headData = {
             "content" : "John Doe SCamera di Commercio"
         },
     ],
+    "fatturazione-elettronica": [
+        {
+            "title": "Fatturazione Elettronica"
+        },
+        {
+            "name" : "keywords",
+            "content" : "key1, key2, key3, Fatturazione Elettronica"
+        },
+        {
+            "name" : "description",
+            "content" : "Some description.. Fatturazione Elettronica"
+        },
+        {
+            "name" : "author",
+            "content" : "John Doe Fatturazione Elettronica"
+        },
+    ]
 };

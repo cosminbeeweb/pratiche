@@ -70,4 +70,14 @@ $(document).ready(function(){
         $("body").css('overflow-y', 'visible');
     });
 
+    if ($('.contact-form').length !== 0)
+        $('.contact-submit').on("click", function(){
+            console.log('clicked');
+            get_recaptcha();
+        });
 });
+
+const get_recaptcha = () => {
+    console.log('get');
+    document.getElementById('recaptchaValidation').value = grecaptcha.getResponse();
+}

@@ -32,14 +32,26 @@ class Footer extends Component {
                 <div>
                     <FooterContent/>
                     <Map/>
-                    <div className="row justify-content-start bottom container">
-                        <div className="col-md-3 offset-md-1">
-                            <img src="/assets/images/logo-header.png" alt="logo footer"/>
+                    <div className="row justify-content-start bottom container actual-footer">
+                        <div className="col-md-2">
+                            <img className="logo-footer" src="/assets/images/logo-header.png" alt="logo footer"/>
                         </div>
-                        <div className="col-md-4 footer-details">
+
+                        <div className="col-md-3 footer-details">
                             <p>©2017 | tutti i diritti sono riservati | credits | P.IVA 06757301210</p>
                         </div>
-                        <div className="col-md-3 offset-md-1 footer-icons">
+
+                        <div className="col-md-5 convenzio">
+                            <p>convenzionato con</p>
+                            <div>
+                                <img src="/assets/images/unappa.png" alt="logo unappa"/>
+                            </div>
+                            <div>
+                                <img src="/assets/images/ordine.png" alt="logo ordine"/>
+                            </div>
+                        </div>
+
+                        <div className="col-md-2 footer-icons">
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook fa-2" aria-hidden="true"></i></a>
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter fa-2" aria-hidden="true"></i></a>
                             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin fa-2" aria-hidden="true"></i></a>
